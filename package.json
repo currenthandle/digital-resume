@@ -1,0 +1,24 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css:build": "node-sass scss/ -o public/css/",
+    "css:watch": "node-sass -w scss/ -o public/css/",
+    "go": "parallelshell 'npm run css:watch' 'nodemon server.js'"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ecstatic": "^1.4.0",
+    "hyperstream": "^1.2.2",
+    "routes": "^2.1.0"
+  },
+  "devDependencies": {
+    "node-sass": "^3.4.2",
+    "nodemon": "^1.9.1",
+    "parallelshell": "^2.0.0"
+  }
+}
