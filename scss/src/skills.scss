@@ -1,6 +1,6 @@
 #skills {
 	.skill-type{
-		text-align: left;
+		//text-align: left;
 		display: inline-block;
 		width: 50%;
 		vertical-align: top;
@@ -13,6 +13,9 @@
 		h2:first-letter {
 			text-transform: uppercase;
 			
+		}
+		td{
+			width: 50%;
 		}
 	}
 }
