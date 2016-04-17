@@ -12,27 +12,27 @@ var tempString = "I am an allround web developer. I am a senior programmer with 
 function navGenerator(first) {
 	if (first){
 		return h('div', { class: 'nav-container' },  h('ul', [
-			h('li', 'About Me'),
-			h('li', 'Education'),
-			h('li', 'Skills'),
-			h('li', 'Projects'),
-			h('li', 'Work Experience'),
+			h('li', h('a', { href: 'about' }, 'About Me')),
+			h('li', h('a', { href: 'education' }, 'Education')),
+			h('li', h('a', { href: 'skills' }, 'Skills')),
+			h('li', h('a', { href: 'projects' }, 'Projects')),
+			h('li', h('a', { href: 'experience' }, 'Work Experience')),
 		]))
 	} else {
 		return h('div', { class: 'nav-container' },  h('ul', [
-			h('img', { src: 'img/profile-img.jpg' }),
-			h('li', 'About Me'),
-			h('li', 'Education'),
-			h('li', 'Skills'),
-			h('li', 'Projects'),
-			h('li', 'Work Experience'),
+			h('a', { href: '/' }, h('img', { src: 'img/profile-img.jpg' })),
+			h('li', h('a', { href: 'about' }, 'About Me')),
+			h('li', h('a', { href: 'education' }, 'Education')),
+			h('li', h('a', { href: 'skills' }, 'Skills')),
+			h('li', h('a', { href: 'projects' }, 'Projects')),
+			h('li', h('a', { href: 'experience' }, 'Work Experience')),
 		]))
 	}
 }
 router.addRoute('/', function(m) {
 	return h('div', { id: 'index' }, [
 		navGenerator(true),
-		h('div', { class: 'page-content' }, [
+		h('div', { class: 'page-content' , id: 'home'}, [
 			h('img', { src: 'img/profile-img.jpg' }),
 			h('h1', 'Casey Siebel'),
 			h('div', 'Oakland, CA'),
@@ -44,13 +44,78 @@ router.addRoute('/', function(m) {
 router.addRoute('/education', function(m) {
 	return h('div', { id: 'index' }, [
 		navGenerator(false),
-		h('div', { class: 'page-content' }, [
-			h('img', { src: 'img/profile-img.jpg' }),
-			h('h1', 'Casey Siebel'),
-			h('div', 'Oakland, CA'),
-			h('h3', 'About Me'),
-			h('p', tempString)
+		h('div', { class: 'page-content', id: 'education' }, [
+			h('h2', { class: 'section-heading' },  'Education'),
+			h('h3', 'University of California, Berkeley'),
+			h('p', 'B.A. in Physics, December 2015')
 		])
+	])
+})
+router.addRoute('/skills', function(m) {
+	return h('div', { id: 'index' }, [
+		navGenerator(false),
+		h('div', { class: 'page-content', id: 'projects'  }, [
+			[h('h2', { class: 'section-heading' },  'Skills')].concat(skillsKeys.map(function(key) {
+				return h('div', { class: 'skill-type', id: key }, [
+					h('h2', key ),
+					h('ul', skills[key].map(function(skill) {
+						return h('li', [
+							h('span', { class: 'skill-name' }, skill.name),
+							h('span', { class: 'skill-score' }, function(){
+								var starsLeft = skill.score
+								var stars = []
+								for(var i = 1; i <= 5; i++){
+									if(starsLeft > 0) { 
+										stars.push(h('span', '# ')) 
+										starsLeft--
+									}
+									else { stars.push(h('span', '. ')) }
+								}
+								return stars
+							}())
+						])
+					}))
+				])
+			}))
+		])
+	])
+})
+router.addRoute('/projects', function(m) {
+	return h('div', { id: 'index' }, [
+		navGenerator(false),
+		h('div', { class: 'page-content', id: 'projects' }, [ h('h2', { class: 'section-heading' },  'Projects')]
+			.concat(projects.map(function(project){
+				return h('div', { class: 'project' }, [
+					h('div', { class: 'name' }, project.name),
+					h('a', { href: project.link, class: 'project-link' }, project.link.substring(8)),
+					h('div', { class: 'role'}, project.role),
+					h('ul', { class: 'description' }, project.description.map(function(bulletPoint){
+						return h('li', bulletPoint)
+					
+					}))
+				])
+			}))
+		)
+	])
+})
+router.addRoute('/experience', function(m) {
+	return h('div', { id: 'index' }, [
+		navGenerator(false),
+		h('div', { class: 'page-content' }, [h('h2', { class: 'section-heading' },  'Work Expirence')]
+			.concat(jobs.map(function(job){
+				return h('div', { class: 'job' }, [
+					h('div', { class: 'employer' }, job.employer),
+					h('div', { class: 'local' }, job.local),
+					h('div', { class: 'postion' }, job.postion),
+					h('div', { class: 'start' }, job.start),
+					h('div', { class: 'end' }, job.end),
+					h('ul', { class: 'description' }, job.description.map(function(bulletPoint){
+						return h('li', bulletPoint)
+					
+					}))
+				])
+			}))
+		)
 	])
 })
 

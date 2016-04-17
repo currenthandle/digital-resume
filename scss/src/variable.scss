@@ -1,0 +1,8 @@
+$nav-background: #ffe6e6;
+$page-background: #ffffe6;
+$nav-btn-background: #90D4A8;
+$nav-btn-border: blue;
+
+$nav-width: 20;
+$page-width: percentage(99-$nav-width);
+$nav-width: percentage($nav-width);

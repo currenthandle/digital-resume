@@ -1,51 +1,49 @@
-body {
-  margin: 0; }
+#content {
+  display: table; }
 
-html, body, #content, #index, .nav-container {
-  height: 100%; }
-
-#index .nav-container {
-  background-color: #ffe6e6;
-  box-sizing: border-box;
-  padding-top: 3rem;
-  vertical-align: top;
-  display: inline-block;
-  height: 100%;
-  width: 20%; }
-  #index .nav-container ul {
-    margin-right: 1rem;
-    padding: 0;
-    list-style-type: none;
-    width: 100%;
-    text-align: center; }
-    #index .nav-container ul li {
-      background-color: #90D4A8;
-      border: 0.1rem solid blue;
-      border-radius: .4rem;
-      text-align: center;
-      display: inline-block;
-      margin: 1rem 0 1rem 0;
-      padding: .85rem 0 .85rem 0;
-      width: 76%;
-      font-size: 1.5rem;
+#index {
+  display: table-row; }
+  #index .nav-container {
+    background-color: #ffe6e6;
+    box-sizing: border-box;
+    padding-top: 3rem;
+    vertical-align: top;
+    width: 20%;
+    display: table-cell; }
+    #index .nav-container ul {
+      margin-right: 1rem;
+      padding: 0;
+      list-style-type: none;
+      width: 100%;
+      text-align: center; }
+      #index .nav-container ul a {
+        text-decoration: none; }
+      #index .nav-container ul li a {
+        background-color: #90D4A8;
+        border: 0.1rem solid blue;
+        border-radius: .4rem;
+        text-align: center;
+        display: inline-block;
+        margin: 1rem 0 1rem 0;
+        padding: .85rem 0 .85rem 0;
+        width: 76%;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: orange; }
+  #index .page-content {
+    background-color: #ffffe6;
+    box-sizing: border-box;
+    vertical-align: top;
+    padding: 4.5rem 2rem 0 2rem;
+    text-align: center;
+    display: table-cell;
+    width: 79%;
+    border-left: .1rem solid grey; }
+    #index .page-content h1 {
       font-weight: bold;
-      color: orange; }
-
-#index .page-content {
-  background-color: #ffffe6;
-  box-sizing: border-box;
-  vertical-align: top;
-  padding: 4.5rem 2rem 0 2rem;
-  text-align: center;
-  display: inline-block;
-  width: 79%;
-  height: 100%;
-  border-left: .1rem solid grey; }
-  #index .page-content h1 {
-    font-weight: bold;
-    font-size: 2.7rem; }
-  #index .page-content img {
-    display: inline;
-    border: .3rem solid orange;
-    border-radius: 20rem;
-    width: 12rem; }
+      font-size: 2.7rem; }
+    #index .page-content img {
+      display: inline;
+      border: .3rem solid orange;
+      border-radius: 20rem;
+      width: 12rem; }

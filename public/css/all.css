@@ -1,0 +1,11 @@
+body {
+  margin: 0; }
+
+html, body, #content, #index, .nav-container {
+  height: 100%; }
+
+.nav-container img {
+  display: inline-block;
+  width: 7rem;
+  border: .2rem solid orange;
+  border-radius: 10rem; }
