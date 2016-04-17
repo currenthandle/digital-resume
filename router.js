@@ -9,16 +9,29 @@ var skillsKeys = Object.keys(skills)
 module.exports = router
 
 var tempString = "I am an allround web developer. I am a senior programmer with good knowledge of front-end techniques. I love structure and order and I also stand for quality. I love spending time on fixing little details and optimizing web apps. Also I like working in a team, you'll learn faster and more. As the saying goes: 'two heads are better than one"
-
-router.addRoute('/', function(m) {
-	return h('div', { id: 'index' }, [
-		h('div', { class: 'nav-container' },  h('ul', [
+function navGenerator(first) {
+	if (first){
+		return h('div', { class: 'nav-container' },  h('ul', [
 			h('li', 'About Me'),
 			h('li', 'Education'),
 			h('li', 'Skills'),
 			h('li', 'Projects'),
 			h('li', 'Work Experience'),
-		])),
+		]))
+	} else {
+		return h('div', { class: 'nav-container' },  h('ul', [
+			h('img', { src: 'img/profile-img.jpg' }),
+			h('li', 'About Me'),
+			h('li', 'Education'),
+			h('li', 'Skills'),
+			h('li', 'Projects'),
+			h('li', 'Work Experience'),
+		]))
+	}
+}
+router.addRoute('/', function(m) {
+	return h('div', { id: 'index' }, [
+		navGenerator(true),
 		h('div', { class: 'page-content' }, [
 			h('img', { src: 'img/profile-img.jpg' }),
 			h('h1', 'Casey Siebel'),
@@ -30,13 +43,7 @@ router.addRoute('/', function(m) {
 })
 router.addRoute('/education', function(m) {
 	return h('div', { id: 'index' }, [
-		h('div', { class: 'nav-container' },  h('ul', [
-			h('li', 'About Me'),
-			h('li', 'Education'),
-			h('li', 'Skills'),
-			h('li', 'Projects'),
-			h('li', 'Work Experience'),
-		])),
+		navGenerator(false),
 		h('div', { class: 'page-content' }, [
 			h('img', { src: 'img/profile-img.jpg' }),
 			h('h1', 'Casey Siebel'),
