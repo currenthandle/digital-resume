@@ -45,11 +45,13 @@ router.addRoute('/', function(m) {
 router.addRoute('/education', function(m) {
 	return h('div', { id: 'index' }, [
 		navGenerator(false),
-		h('div', { class: 'page-content', id: 'education' }, [
+		h('div', { class: 'page-content', id: 'education' }, 
+		[
+			h('h2', { class: 'section-heading' }, h('span', 'Education')),
 			h('img', { id: 'seal', src: education.seal }),
-			h('h2', { class: 'section-heading' },  'Education'),
-			h('h3', 'University of California, Berkeley'),
-			h('p', 'B.A. in Physics, December 2015')
+			h('h2', { id: 'school-name' },  h('span', education.name)),
+			h('h3', [ h('span', education.degree + ', ' + education.gradDate)]),
+			h('p', education.blurb )
 		])
 	])
 })

@@ -11,7 +11,7 @@ html, body, #content, #index, .nav-container {
 #index {
   display: table-row; }
   #index .nav-container {
-    background-color: #ffe6e6;
+    background-color: rgba(209, 249, 208, 0.65);
     box-sizing: border-box;
     padding-top: 3rem;
     vertical-align: top;
@@ -51,6 +51,8 @@ html, body, #content, #index, .nav-container {
     display: table-cell;
     width: 80%;
     border-left: .1rem solid grey; }
+    #index .page-content .section-heading {
+      font-size: 2rem; }
 
 #home {
   background-color: #ffffe6;
@@ -70,8 +72,28 @@ html, body, #content, #index, .nav-container {
     border-radius: 20rem;
     width: 12rem; }
 
-#eduaction #seal {
-  width: 2rem; }
+#education {
+  padding-top: 5rem !important;
+  background-image: url("/img/lib.jpg");
+  background-size: 100% 100%; }
+  #education span, #education p {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: .2rem;
+    -webkit-box-shadow: 0 0 0.9rem 0.8rem rgba(255, 255, 255, 0.8); }
+  #education #seal {
+    width: 9.5rem; }
+
+#skills .skill-type {
+  text-align: left;
+  display: inline-block;
+  width: 50%;
+  vertical-align: top; }
+  #skills .skill-type ul {
+    list-style-type: none; }
+  #skills .skill-type .skill-name {
+    margin-right: 8rem; }
+  #skills .skill-type h2:first-letter {
+    text-transform: uppercase; }
 
 #resume {
   text-align: center; }

@@ -1,0 +1,11 @@
+#skills .skill-type {
+  text-align: left;
+  display: inline-block;
+  width: 50%;
+  vertical-align: top; }
+  #skills .skill-type ul {
+    list-style-type: none; }
+  #skills .skill-type .skill-name {
+    margin-right: 8rem; }
+  #skills .skill-type h2:first-letter {
+    text-transform: uppercase; }

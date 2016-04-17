@@ -6,7 +6,6 @@
 		box-sizing: border-box;
 		padding-top: 3rem;
 		vertical-align: top;
-		@debug #{$nav-width};
 		width: $nav-width;
 		display: table-cell;
 		ul{

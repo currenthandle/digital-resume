@@ -1,5 +1,20 @@
-#eduaction{
+#education{
+	padding-top: 5rem !important;
+	background-image: url('/img/lib.jpg');
+	background-size: 100% 100%;
+	.section-heading{
+		//font-size: 2rem;
+	}
+	span , p{
+		background-color: rgba(255, 255, 255, 0.8);
+		border-radius: .2rem;
+		-webkit-box-shadow: 0 0 .9rem .8rem rgba(255, 255, 255, .8);
+	}
 	#seal {
-		width: 2rem;
+		width: 9.5rem;
 	}		
+	#content-wrapper{
+		//background-color: rgba(165, 168, 107, 0.4);
+		//border: .2rem solid grey;
+	}
 }

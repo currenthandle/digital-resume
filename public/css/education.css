@@ -1,2 +1,10 @@
-#eduaction #seal {
-  width: 2rem; }
+#education {
+  padding-top: 5rem !important;
+  background-image: url("/img/lib.jpg");
+  background-size: 100% 100%; }
+  #education span, #education p {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: .2rem;
+    -webkit-box-shadow: 0 0 0.9rem 0.8rem rgba(255, 255, 255, 0.8); }
+  #education #seal {
+    width: 9.5rem; }

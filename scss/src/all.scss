@@ -15,7 +15,6 @@ html , body , #content , #index , .nav-container {
 		box-sizing: border-box;
 		padding-top: 3rem;
 		vertical-align: top;
-		@debug #{$nav-width};
 		width: $nav-width;
 		display: table-cell;
 		img {
@@ -50,6 +49,9 @@ html , body , #content , #index , .nav-container {
 		}
 	}
 	.page-content {
+		.section-heading{
+			font-size: 2rem;
+		}
 		background-color: $page-background;
 		box-sizing: border-box;
 		vertical-align: top;
