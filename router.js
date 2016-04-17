@@ -3,6 +3,7 @@ var h = require('virtual-dom/h')
 var skills = require('./data/skills')
 var jobs = require('./data/expirence')
 var projects = require('./data/projects')
+var education = require('./data/education.js')
 
 var skillsKeys = Object.keys(skills)
 
@@ -45,6 +46,7 @@ router.addRoute('/education', function(m) {
 	return h('div', { id: 'index' }, [
 		navGenerator(false),
 		h('div', { class: 'page-content', id: 'education' }, [
+			h('img', { id: 'seal', src: education.seal }),
 			h('h2', { class: 'section-heading' },  'Education'),
 			h('h3', 'University of California, Berkeley'),
 			h('p', 'B.A. in Physics, December 2015')
@@ -54,7 +56,7 @@ router.addRoute('/education', function(m) {
 router.addRoute('/skills', function(m) {
 	return h('div', { id: 'index' }, [
 		navGenerator(false),
-		h('div', { class: 'page-content', id: 'projects'  }, [
+		h('div', { class: 'page-content', id: 'skills'  }, [
 			[h('h2', { class: 'section-heading' },  'Skills')].concat(skillsKeys.map(function(key) {
 				return h('div', { class: 'skill-type', id: key }, [
 					h('h2', key ),
@@ -101,7 +103,7 @@ router.addRoute('/projects', function(m) {
 router.addRoute('/experience', function(m) {
 	return h('div', { id: 'index' }, [
 		navGenerator(false),
-		h('div', { class: 'page-content' }, [h('h2', { class: 'section-heading' },  'Work Expirence')]
+		h('div', { class: 'page-content', id: 'experience' }, [h('h2', { class: 'section-heading' },  'Work Expirence')]
 			.concat(jobs.map(function(job){
 				return h('div', { class: 'job' }, [
 					h('div', { class: 'employer' }, job.employer),

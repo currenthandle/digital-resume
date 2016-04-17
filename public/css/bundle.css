@@ -70,6 +70,9 @@ html, body, #content, #index, .nav-container {
     border-radius: 20rem;
     width: 12rem; }
 
+#eduaction #seal {
+  width: 2rem; }
+
 #resume {
   text-align: center; }
   #resume #resume-heading {
