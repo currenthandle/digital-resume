@@ -4,9 +4,30 @@ var skills = require('./skills')
 var jobs = require('./expirence')
 var projects = require('./projects')
 
+var skillsKeys = Object.keys(skills)
+
 module.exports = router
 
 router.addRoute('/', function(m) {
+	return h('div', { id: 'index' }, [
+		h('div', { class: 'nav-container' },  h('ul', [
+			h('li', 'About Me'),
+			h('li', 'Education'),
+			h('li', 'Skills'),
+			h('li', 'Projects'),
+			h('li', 'Work Experience'),
+		])),
+		h('div', { class: 'page-content' }, [
+			h('img', { src: 'img/profile-img.jpg' }),
+			h('h1', 'Casey Siebel'),
+			h('div', 'Oakland, CA'),
+			h('h3', 'About Me'),
+			h('p', 'The quick brown fox loris ipsumed')
+		])
+	])
+})
+
+router.addRoute('/resume', function(m) {
 	return h('div', { id: 'resume' }, [
 		h('div', { id: 'resume-heading' }, [
 			h('h1', 'Casey'),
@@ -17,35 +38,39 @@ router.addRoute('/', function(m) {
 		]),
 		h('div', { id: 'resume-body' }, [
 			h('form', h('input', { type: 'text', name: 'query' })),
-			// TOOLS
-			h('div', { id: 'tools' }, [
-				h('h2', 'Tools'),
-				h('ul', skills.map(function(skill) {
-					return h('li', [
-						h('span', { class: 'skill-name' }, skill.name),
-						h('span', { class: 'skill-score' }, function(){
-							var starsLeft = skill.score
-							var stars = []
-							for(var i = 1; i <= 5; i++){
-								if(starsLeft > 0) { 
-									stars.push(h('span', '*')) 
-									starsLeft--
-								}
-								else { stars.push(h('span', 'o')) }
-							}
-							return stars
-						}())
+			// SKILLS
+			h('div', { id: 'skills' }, 
+				[h('h2', { class: 'section-heading' },  'Skills')].concat(skillsKeys.map(function(key) {
+					return h('div', { class: 'skill-type', id: key }, [
+						h('h2', key ),
+						h('ul', skills[key].map(function(skill) {
+							return h('li', [
+								h('span', { class: 'skill-name' }, skill.name),
+								h('span', { class: 'skill-score' }, function(){
+									var starsLeft = skill.score
+									var stars = []
+									for(var i = 1; i <= 5; i++){
+										if(starsLeft > 0) { 
+											stars.push(h('span', '# ')) 
+											starsLeft--
+										}
+										else { stars.push(h('span', '. ')) }
+									}
+									return stars
+								}())
+							])
+						}))
 					])
 				}))
-			]),
+			),
 			// Education
 			h('div', { id: 'education' }, [
-				h('h2', 'Education'),
+				h('h2', { class: 'section-heading' },  'Education'),
 				h('h3', 'University of California, Berkeley'),
 				h('p', 'B.A. in Physics, December 2015')
 			]),
 			// Project
-			h('div', { id: 'project' }, projects.map(function(project){
+			h('div', { id: 'projects' }, [h('h2', { class: 'section-heading' },  'Projects')].concat(projects.map(function(project){
 				return h('div', { class: 'project' }, [
 					h('div', { class: 'name' }, project.name),
 					h('a', { href: project.link, class: 'project-link' }, project.link.substring(8)),
@@ -55,9 +80,9 @@ router.addRoute('/', function(m) {
 					
 					}))
 				])
-			})),
+			}))),
 			// Experience
-			h('div', { id: 'experience' }, jobs.map(function(job){
+			h('div', { id: 'experience' }, [h('h2', { class: 'section-heading' },  'Work Expirence')].concat(jobs.map(function(job){
 				return h('div', { class: 'job' }, [
 					h('div', { class: 'employer' }, job.employer),
 					h('div', { class: 'local' }, job.local),
@@ -69,7 +94,7 @@ router.addRoute('/', function(m) {
 					
 					}))
 				])
-			}))
+			})))
 		])
 	])
 })

@@ -1,0 +1,23 @@
+#index {
+	.nav-container{
+		border-right: .1rem solid grey;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		ul{
+			list-style-type: none ;
+			li{
+				color: red;	
+			}
+		}
+	}
+	.page-content {
+		img {
+			border-radius: 20rem;
+			width: 40%;
+		}
+		float: right;
+	}
+}
+

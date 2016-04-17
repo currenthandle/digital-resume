@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "css:build": "node-sass scss/ -o public/css/",
-    "css:watch": "node-sass -w scss/ -o public/css/",
+    "css": "node-sass scss/bundle.scss -o public/css",
+    "css:watch": "node-sass scss/bundle.scss -w -o public/css",
     "go": "parallelshell 'npm run css:watch' 'nodemon server.js'"
   },
   "author": "",

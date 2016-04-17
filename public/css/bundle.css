@@ -1,0 +1,41 @@
+#index .nav-container {
+  border-right: .1rem solid grey;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0; }
+  #index .nav-container ul {
+    list-style-type: none; }
+    #index .nav-container ul li {
+      color: red; }
+
+#index .page-content {
+  float: right; }
+  #index .page-content img {
+    border-radius: 20rem;
+    width: 40%; }
+
+#resume {
+  text-align: center; }
+  #resume #resume-heading {
+    text-align: center; }
+    #resume #resume-heading #git-img {
+      width: 6rem; }
+  #resume #resume-body .section-heading {
+    border-bottom: .1rem solid grey; }
+  #resume #resume-body #skills {
+    text-align: center; }
+    #resume #resume-body #skills .skill-type {
+      vertical-align: top;
+      display: inline-block;
+      width: 25%; }
+      #resume #resume-body #skills .skill-type ul {
+        list-style-type: none; }
+  #resume #resume-body #projects {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top; }
+  #resume #resume-body #experience {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top; }

@@ -1,7 +1,40 @@
 $badass: #bada55;
-#resume-heading{ 
+#resume{
 	text-align: center;
-	#git-img {
-		width: 6rem;
+	#resume-heading{ 
+		text-align: center;
+		#git-img {
+			width: 6rem;
+		}
 	}
+	#resume-body{
+		.section-heading{
+			border-bottom: .1rem solid grey;
+		}
+		#skills  {
+			text-align: center;
+			.skill-type{
+				vertical-align: top;
+				display: inline-block;	
+				width: 25%;
+				ul{
+					list-style-type: none;
+					li{
+				
+					}
+				}
+			}
+		}
+		#projects {
+			display: inline-block;
+			width: 50%;
+			vertical-align: top;
+		}
+		#experience{
+			display: inline-block;
+			width: 50%;
+			vertical-align: top;
+		}
+	}
+	
 }
