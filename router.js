@@ -62,10 +62,10 @@ router.addRoute('/skills', function(m) {
 			[h('h2', { class: 'section-heading' },  'Skills')].concat(skillsKeys.map(function(key) {
 				return h('div', { class: 'skill-type', id: key }, [
 					h('h2', key ),
-					h('ul', skills[key].map(function(skill) {
-						return h('li', [
-							h('span', { class: 'skill-name' }, skill.name),
-							h('span', { class: 'skill-score' }, function(){
+					h('table', skills[key].map(function(skill) {
+						return h('tr', [
+							h('td', { class: 'skill-name' }, skill.name),
+							h('td', { class: 'skill-score' }, function(){
 								var starsLeft = skill.score
 								var stars = []
 								for(var i = 1; i <= 5; i++){
