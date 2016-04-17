@@ -17,6 +17,7 @@
     "ecstatic": "^1.4.0",
     "hyperstream": "^1.2.2",
     "routes": "^2.1.0",
+    "virtual-dom": "^2.1.1",
     "xhr": "^2.2.0"
   },
   "devDependencies": {
