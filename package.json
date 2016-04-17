@@ -7,8 +7,6 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "css": "node-sass scss/bundle.scss -o public/css",
     "css-w": "node-sass scss/bundle.scss -w -o public/css",
-    "js": "browserify client/*.js > public/bundle.js",
-    "js-w": "watchify client/*.js -o public/bundle.js -dv",
     "go": "parallelshell 'npm run css-w' 'npm run js-w' 'nodemon server.js'"
   },
   "author": "",
@@ -21,10 +19,8 @@
     "xhr": "^2.2.0"
   },
   "devDependencies": {
-    "browserify": "^13.0.0",
     "node-sass": "^3.4.2",
     "nodemon": "^1.9.1",
     "parallelshell": "^2.0.0",
-    "watchify": "^3.7.0"
   }
 }
