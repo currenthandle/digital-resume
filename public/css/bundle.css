@@ -4,14 +4,15 @@ body {
 html, body, #content, #index, .nav-container {
   height: 100%; }
 
+#content {
+  width: 100%;
+  display: table; }
+
 .nav-container img {
   display: inline-block;
   width: 7rem;
   border: .2rem solid orange;
   border-radius: 10rem; }
-
-#content {
-  display: table; }
 
 #index {
   display: table-row; }

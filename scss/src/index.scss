@@ -7,9 +7,6 @@ $nav-width: 20;
 $content-width: percentage((99-$nav-width)/100);
 $nav-width: percentage(($nav-width)/100);
 
-#content{
-	display: table;
-}
 #index {
 	display: table-row;
 	.nav-container{
