@@ -1,0 +1,21 @@
+
+#home{
+	background-color: $page-background;
+	box-sizing: border-box;
+	vertical-align: top;
+	padding: 4.5rem 2rem 0 2rem;
+	text-align: center;
+	display: table-cell;
+	width: $content-width;
+	border-left: .1rem solid grey;
+	h1{
+		font-weight: bold;
+		font-size: 2.7rem;
+	}
+	img {
+		display: inline;
+		border: .3rem solid orange;
+		border-radius: 20rem;
+		width: 12rem;
+	}
+}
