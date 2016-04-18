@@ -4,29 +4,25 @@ var skills = require('./data/skills')
 var jobs = require('./data/expirence')
 var projects = require('./data/projects')
 var education = require('./data/education.js')
+var navContent = require('./data/nav-routes.js')
 
 var skillsKeys = Object.keys(skills)
 
 module.exports = router
 
 var tempString = "I am an allround web developer. I am a senior programmer with good knowledge of front-end techniques. I love structure and order and I also stand for quality. I love spending time on fixing little details and optimizing web apps. Also I like working in a team, you'll learn faster and more. As the saying goes: 'two heads are better than one"
+
+//navContent.map((navItem) => h('li', h('a', { href: '/' + navItem.uri }, navItem.tabName)))
+
 function navGenerator(first) {
 	if (first){
-		return h('div', { class: 'nav-container' },  h('ul', [
-			h('li', h('a', { href: 'about' }, 'about me')),
-			h('li', h('a', { href: 'education' }, 'education')),
-			h('li', h('a', { href: 'skills' }, 'skills')),
-			h('li', h('a', { href: 'projects' }, 'projects')),
-			h('li', h('a', { href: 'experience' }, 'work experience')),
-		]))
+		return h('div', { class: 'nav-container' },  h('ul', 
+			navContent.map((navItem) => h('li', h('a', { href: '/' + navItem.uri }, navItem.tabName)))
+		))
 	} else {
 		return h('div', { class: 'nav-container' },  h('ul', [
-			h('a', { href: '/' }, h('img', { src: 'img/profile-img.jpg' })),
-			h('li', h('a', { href: 'about' }, 'About Me')),
-			h('li', h('a', { href: 'education' }, 'Education')),
-			h('li', h('a', { href: 'skills' }, 'Skills')),
-			h('li', h('a', { href: 'projects' }, 'Projects')),
-			h('li', h('a', { href: 'experience' }, 'Work Experience')),
+			[h('a', { href: '/' }, h('img', { src: 'img/profile-img.jpg' }))]
+				.concat(navContent.map((navItem) => h('li', h('a', { href: '/' + navItem.uri }, navItem.tabName))))
 		]))
 	}
 }
