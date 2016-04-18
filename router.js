@@ -94,10 +94,7 @@ router.addRoute('/skills', function(m) {
 	])
 })
 function tagGenerator (content) {
-	return 	h('div', { class: 'tags' }, content.tags.map((tag) => h('span', {class: 'tag' },  [
-		h('i', { class: 'fa fa-tag', 'aria-hidden': 'true'}),
-		tag
-	])))
+	return  h('div', { class: 'tag-wrapper' }, content.tags.map((tag) => h('span', {class: 'tag' },  tag)))
 }
 router.addRoute('/projects', function(m) {
 	var projects = require('./data/projects')
