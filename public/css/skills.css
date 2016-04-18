@@ -17,8 +17,10 @@
     #skills .skill-type table td {
       width: 50%;
       padding: .5rem 0 .5rem; }
+    #skills .skill-type table .skill-name {
+      font-weight: bold; }
     #skills .skill-type table .skill-score i {
-      color: rgba(124, 54, 2, 0.8);
+      color: rgba(222, 89, 58, 0.92);
       margin-left: .5rem;
       font-size: 1.1rem; }
     #skills .skill-type table .skill-score:hover i {
