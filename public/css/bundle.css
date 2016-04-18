@@ -28,6 +28,8 @@ html, body, #content, #index, .nav-container {
       list-style-type: none;
       width: 100%;
       text-align: center; }
+      #index .nav-container ul li:hover {
+        background-color: rgba(124, 54, 2, 0.8); }
       #index .nav-container ul a {
         text-decoration: none; }
       #index .nav-container ul li a {
