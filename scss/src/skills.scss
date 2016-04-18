@@ -17,8 +17,24 @@
 		table{
 			display:inline-table;
 			width: 100%;
+			tr {
+				margin: 1rem;
+			}
 			td{
 				width: 50%;
+				padding: .5rem 0 .5rem;
+			}
+			.skill-score {
+				i {
+					color: rgba(124, 54, 2, 0.8);
+					margin-left: .3rem;
+					font-size: 1.3rem;
+				}
+				&:hover{
+					i {
+						font-size: 1.5rem;
+					}	
+				}
 			}
 		}
 	}

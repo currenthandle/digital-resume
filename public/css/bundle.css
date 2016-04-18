@@ -35,6 +35,8 @@ html, body, #content, #index, .nav-container {
         background-color: #f9f9f9; }
         #index .nav-container ul .active a {
           color: black; }
+        #index .nav-container ul .active:hover {
+          background-color: #f9f9f9; }
       #index .nav-container ul a {
         text-decoration: none; }
       #index .nav-container ul li a {
@@ -139,8 +141,17 @@ html, body, #content, #index, .nav-container {
   #skills .skill-type table {
     display: inline-table;
     width: 100%; }
+    #skills .skill-type table tr {
+      margin: 1rem; }
     #skills .skill-type table td {
-      width: 50%; }
+      width: 50%;
+      padding: .5rem 0 .5rem; }
+    #skills .skill-type table .skill-score i {
+      color: rgba(124, 54, 2, 0.8);
+      margin-left: .3rem;
+      font-size: 1.3rem; }
+    #skills .skill-type table .skill-score:hover i {
+      font-size: 1.5rem; }
 
 #projects .project {
   text-align: left;
