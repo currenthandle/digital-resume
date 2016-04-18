@@ -148,10 +148,10 @@ html, body, #content, #index, .nav-container {
       padding: .5rem 0 .5rem; }
     #skills .skill-type table .skill-score i {
       color: rgba(124, 54, 2, 0.8);
-      margin-left: .3rem;
-      font-size: 1.3rem; }
+      margin-left: .5rem;
+      font-size: 1.1rem; }
     #skills .skill-type table .skill-score:hover i {
-      font-size: 1.5rem; }
+      transform: scale(1.46); }
 
 #projects .project {
   text-align: left;
