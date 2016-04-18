@@ -11,6 +11,7 @@ html, body, #content, #index, .nav-container {
 #index {
   display: table-row; }
   #index .nav-container {
+    position: fixed;
     background-color: #DE593A;
     box-sizing: border-box;
     padding-top: 3rem;
@@ -69,6 +70,14 @@ html, body, #content, #index, .nav-container {
   background-color: #fff;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.155);
   border-radius: .1rem; }
+
+.tag {
+  margin: .5rem 7% .5rem 7%;
+  padding: .3rem;
+  background-color: #fff;
+  display: inline-block; }
+  .tag i {
+    color: blue; }
 
 #home {
   background-color: #f9f9f9;

@@ -8,6 +8,13 @@ module.exports = function() {
 			description: [
 				'Built fully responsive views according to the client\'s specifications',
 				'Wrote front end scripts and a simple Node.js server to achieve the client\'s desired features including a touch enabled carousel'
+			],
+			tags: [
+				'Javascript',
+				'HTML',
+				'CSS',
+				'Bootsrap',
+				'Responsive Design'
 			]
 		},
 		{ 
@@ -17,6 +24,12 @@ module.exports = function() {
 			img: 'img/hot-spot.png',
 			description: [
 				'Built a Node.js application that ranks public wifi hotspots by wifi health, with user-generated empirical speedtest data that persists in a MongoDB'
+			],
+			tags: [
+				'Node.js',
+				'MongoDB',
+				'EJS',
+				'Bootsrap',
 			]
 		}
 	]	

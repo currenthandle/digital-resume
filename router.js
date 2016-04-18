@@ -47,6 +47,12 @@ router.addRoute('/', function(m) {
 		]))
 	])
 })
+router.addRoute('/about', function(m) {
+	return h('div', { id: 'index' }, [
+		navGenerator(m.route),
+		h('div', { class: 'page-content', id: 'about' }, 'ABOUT')
+	])
+})
 router.addRoute('/education', function(m) {
 	return h('div', { id: 'index' }, [
 		navGenerator(m.route),
@@ -100,8 +106,11 @@ router.addRoute('/projects', function(m) {
 				h('a', { href: project.link, class: 'project-link' }, project.link.substring(8)),
 				h('ul', { class: 'description' }, project.description.map(function(bulletPoint){
 					return h('li', bulletPoint)
-				
-				}))
+				})),
+				h('div', { class: 'tags' }, project.tags.map((tag) => h('span', {class: 'tag' },  [
+					h('i', { class: 'fa fa-tag', 'aria-hidden': 'true'}),
+					tag
+				])))
 			])
 		}))
 	])
