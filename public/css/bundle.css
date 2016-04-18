@@ -30,6 +30,8 @@ html, body, #content, #index, .nav-container {
       text-align: center; }
       #index .nav-container ul li:hover {
         background-color: rgba(124, 54, 2, 0.8); }
+      #index .nav-container ul li:active {
+        background-color: rgba(124, 54, 2, 0.8); }
       #index .nav-container ul a {
         text-decoration: none; }
       #index .nav-container ul li a {
@@ -51,17 +53,20 @@ html, body, #content, #index, .nav-container {
     display: table-cell;
     width: 75%;
     border-left: .1rem solid grey; }
-    #index .page-content .section-heading {
-      font-size: 2rem; }
-    #index .page-content .sub-heading {
-      font-size: 1.5rem;
-      font-weight: bold; }
-    #index .page-content .content-box {
-      margin: 0 7% 2rem 7%;
-      padding: 2rem;
-      background-color: #fff;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.155);
-      border-radius: .1rem; }
+
+.section-heading {
+  font-size: 2rem; }
+
+.sub-heading {
+  font-size: 1.5rem;
+  font-weight: bold; }
+
+.content-box {
+  margin: 0 7% 2rem 7%;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.155);
+  border-radius: .1rem; }
 
 #home {
   background-color: #f9f9f9;
@@ -90,12 +95,11 @@ html, body, #content, #index, .nav-container {
     width: 60%;
     display: inline-block; }
   #education .content-box {
-    border-radius: 0.12rem !important;
-    background-color: rgba(255, 255, 255, 0.7) !important;
-    margin-top: 1.7rem !important;
-    margin-left: 9rem !important;
-    margin-right: 9rem !important;
-    padding-right: 0;
+    border-radius: 0.12rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin-top: 1.7rem;
+    margin-left: 9rem;
+    margin-right: 9rem;
     display: inline-block; }
     #education .content-box p {
       width: 90%; }

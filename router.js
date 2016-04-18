@@ -13,11 +13,11 @@ var tempString = "I am an allround web developer. I am a senior programmer with 
 function navGenerator(first) {
 	if (first){
 		return h('div', { class: 'nav-container' },  h('ul', [
-			h('li', h('a', { href: 'about' }, 'About Me')),
-			h('li', h('a', { href: 'education' }, 'Education')),
-			h('li', h('a', { href: 'skills' }, 'Skills')),
-			h('li', h('a', { href: 'projects' }, 'Projects')),
-			h('li', h('a', { href: 'experience' }, 'Work Experience')),
+			h('li', h('a', { href: 'about' }, 'about me')),
+			h('li', h('a', { href: 'education' }, 'education')),
+			h('li', h('a', { href: 'skills' }, 'skills')),
+			h('li', h('a', { href: 'projects' }, 'projects')),
+			h('li', h('a', { href: 'experience' }, 'work experience')),
 		]))
 	} else {
 		return h('div', { class: 'nav-container' },  h('ul', [
@@ -33,13 +33,13 @@ function navGenerator(first) {
 router.addRoute('/', function(m) {
 	return h('div', { id: 'index' }, [
 		navGenerator(true),
-		h('div', { class: 'page-content' , id: 'home'}, [
+		h('div', { class: 'page-content' , id: 'home'}, h('div', { class: 'content-box' }, [
 			h('img', { src: 'img/profile-img.jpg' }),
 			h('h1', 'Casey Siebel'),
 			h('div', 'Oakland, CA'),
 			h('h3', 'About Me'),
 			h('p', tempString)
-		])
+		]))
 	])
 })
 router.addRoute('/education', function(m) {
@@ -48,7 +48,6 @@ router.addRoute('/education', function(m) {
 		h('div', { class: 'page-content', id: 'education' }, 
 		[
 			h('div', { class: 'content-box' }, [
-				h('h2', { class: 'section-heading' }, h('span', 'Education')),
 				h('img', { id: 'seal', src: education.seal }),
 				h('h2', { id: 'school-name' },  h('span', education.name)),
 				h('h3', [ h('span', education.degree + ', ' + education.gradDate)]),
@@ -61,7 +60,7 @@ router.addRoute('/skills', function(m) {
 	return h('div', { id: 'index' }, [
 		navGenerator(false),
 		h('div', { class: 'page-content', id: 'skills'  }, [
-			[h('h2', { class: 'section-heading' },  'Skills')].concat(skillsKeys.map(function(key) {
+			skillsKeys.map(function(key) {
 				return h('div', { class: 'skill-type content-box', id: key }, [
 					h('h2', { class: 'sub-heading' }, key ),
 					h('table', skills[key].map(function(skill) {
@@ -82,26 +81,24 @@ router.addRoute('/skills', function(m) {
 						])
 					}))
 				])
-			}))
+			})
 		])
 	])
 })
 router.addRoute('/projects', function(m) {
 	return h('div', { id: 'index' }, [
 		navGenerator(false),
-		h('div', { class: 'page-content', id: 'projects' }, [ h('h2', { class: 'section-heading' },  'Projects')]
-			.concat(projects.map(function(project){
-				return h('div', { class: 'project content-box' }, [
-					h('div', { class: 'img-wrapper' }, h('img', { src: project.img })),
-					h('div', { class: 'name sub-heading' }, project.name),
-					h('a', { href: project.link, class: 'project-link' }, project.link.substring(8)),
-					h('ul', { class: 'description' }, project.description.map(function(bulletPoint){
-						return h('li', bulletPoint)
-					
-					}))
-				])
-			}))
-		)
+		h('div', { class: 'page-content', id: 'projects' }, projects.map(function(project){
+			return h('div', { class: 'project content-box' }, [
+				h('div', { class: 'img-wrapper' }, h('img', { src: project.img })),
+				h('div', { class: 'name sub-heading' }, project.name),
+				h('a', { href: project.link, class: 'project-link' }, project.link.substring(8)),
+				h('ul', { class: 'description' }, project.description.map(function(bulletPoint){
+					return h('li', bulletPoint)
+				
+				}))
+			])
+		}))
 	])
 })
 router.addRoute('/experience', function(m) {
