@@ -1,12 +1,5 @@
 var router = require('routes')()
 var h = require('virtual-dom/h')
-var skills = require('./data/skills')
-var jobs = require('./data/expirence')
-var projects = require('./data/projects')
-var education = require('./data/education.js')
-var navContent = require('./data/nav-routes.js')
-
-var skillsKeys = Object.keys(skills)
 
 module.exports = router
 
@@ -15,6 +8,7 @@ var tempString = "I am an allround web developer. I am a senior programmer with 
 //navContent.map((navItem) => h('li', h('a', { href: '/' + navItem.uri }, navItem.tabName)))
 
 function navGenerator(route) {
+	var navContent = require('./data/nav-routes.js')
 	if (route === '/'){
 		return h('div', { class: 'nav-container' },  h('ul', [
 			navContent.map((navItem) => h('li', h('a', { href:  navItem.uri }, navItem.tabName)))
@@ -54,6 +48,7 @@ router.addRoute('/about', function(m) {
 	])
 })
 router.addRoute('/education', function(m) {
+	var education = require('./data/education.js')
 	return h('div', { id: 'index' }, [
 		navGenerator(m.route),
 		h('div', { class: 'page-content', id: 'education' }, 
@@ -68,6 +63,8 @@ router.addRoute('/education', function(m) {
 	])
 })
 router.addRoute('/skills', function(m) {
+	var skills = require('./data/skills')
+	var skillsKeys = Object.keys(skills)
 	return h('div', { id: 'index' }, [
 		navGenerator(m.route),
 		h('div', { class: 'page-content', id: 'skills'  }, [
@@ -96,7 +93,14 @@ router.addRoute('/skills', function(m) {
 		])
 	])
 })
+function tagGenerator (content) {
+	return 	h('div', { class: 'tags' }, content.tags.map((tag) => h('span', {class: 'tag' },  [
+		h('i', { class: 'fa fa-tag', 'aria-hidden': 'true'}),
+		tag
+	])))
+}
 router.addRoute('/projects', function(m) {
+	var projects = require('./data/projects')
 	return h('div', { id: 'index' }, [
 		navGenerator(m.route),
 		h('div', { class: 'page-content', id: 'projects' }, projects.map(function(project){
@@ -107,15 +111,13 @@ router.addRoute('/projects', function(m) {
 				h('ul', { class: 'description' }, project.description.map(function(bulletPoint){
 					return h('li', bulletPoint)
 				})),
-				h('div', { class: 'tags' }, project.tags.map((tag) => h('span', {class: 'tag' },  [
-					h('i', { class: 'fa fa-tag', 'aria-hidden': 'true'}),
-					tag
-				])))
+				tagGenerator(project)
 			])
 		}))
 	])
 })
 router.addRoute('/experience', function(m) {
+	var jobs = require('./data/expirence')
 	return h('div', { id: 'index' }, [
 		navGenerator(m.route),
 		h('div', { class: 'page-content', id: 'experience' }, jobs.map(function(job){
