@@ -94,6 +94,8 @@ router.addRoute('/skills', function(m) {
 	])
 })
 function tagGenerator (content) {
+	//console.log('content', content)
+	//console.log('content.tags', content.tags)
 	return  h('div', { class: 'tag-wrapper' }, content.tags.map((tag) => h('span', {class: 'tag' },  tag)))
 }
 router.addRoute('/projects', function(m) {
@@ -108,6 +110,7 @@ router.addRoute('/projects', function(m) {
 				h('ul', { class: 'description' }, project.description.map(function(bulletPoint){
 					return h('li', bulletPoint)
 				})),
+				console.log('project', project),
 				tagGenerator(project)
 			])
 		}))
@@ -129,7 +132,8 @@ router.addRoute('/experience', function(m) {
 				h('p', { class: 'description' }, job.description.map(function(bulletPoint){
 					return h('li', bulletPoint)
 				
-				}))
+				})),
+				tagGenerator(job)
 			])
 		}))
 	])
