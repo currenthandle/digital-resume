@@ -9,5 +9,8 @@
     margin-right: 8rem; }
   #skills .skill-type h2:first-letter {
     text-transform: uppercase; }
-  #skills .skill-type td {
-    width: 50%; }
+  #skills .skill-type table {
+    display: inline-table;
+    width: 100%; }
+    #skills .skill-type table td {
+      width: 50%; }

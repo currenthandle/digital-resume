@@ -53,6 +53,9 @@ html, body, #content, #index, .nav-container {
     border-left: .1rem solid grey; }
     #index .page-content .section-heading {
       font-size: 2rem; }
+    #index .page-content .sub-heading {
+      font-size: 1.5rem;
+      font-weight: bold; }
 
 #home {
   background-color: #ffffe6;
@@ -94,8 +97,17 @@ html, body, #content, #index, .nav-container {
     margin-right: 8rem; }
   #skills .skill-type h2:first-letter {
     text-transform: uppercase; }
-  #skills .skill-type td {
-    width: 50%; }
+  #skills .skill-type table {
+    display: inline-table;
+    width: 100%; }
+    #skills .skill-type table td {
+      width: 50%; }
+
+#projects .project {
+  text-align: left;
+  margin-bottom: 5rem; }
+  #projects .project .name {
+    font-size: 1.6rem; }
 
 #resume {
   text-align: center; }

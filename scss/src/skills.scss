@@ -14,8 +14,12 @@
 			text-transform: uppercase;
 			
 		}
-		td{
-			width: 50%;
+		table{
+			display:inline-table;
+			width: 100%;
+			td{
+				width: 50%;
+			}
 		}
 	}
 }

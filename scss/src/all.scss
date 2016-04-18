@@ -52,6 +52,10 @@ html , body , #content , #index , .nav-container {
 		.section-heading{
 			font-size: 2rem;
 		}
+		.sub-heading {
+			font-size: 1.5rem;
+			font-weight: bold;
+		}
 		background-color: $page-background;
 		box-sizing: border-box;
 		vertical-align: top;

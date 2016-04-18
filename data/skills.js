@@ -1,11 +1,11 @@
 module.exports = function() {
 	return {
 		languages: [
+			{ name: 'HTML5', score: '5'},
+			{ name: 'CSS3', score: '5'},
 			{ name: 'Javascript', score: '4'},
 			{ name: 'Node.js', score: '4'},
 			{ name: 'MongDB', score: '4'},
-			{ name: 'HTML5', score: '5'},
-			{ name: 'CSS3', score: '5'},
 			{ name: 'SCSS', score: '4'},
 			{ name: 'Python', score: '2'},
 			{ name: 'Java', score: '2'},

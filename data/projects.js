@@ -8,7 +8,6 @@ module.exports = function() {
 				'Built fully responsive views according to the client\'s specifications',
 				'Wrote front end scripts and a simple Node.js server to achieve the client\'s desired features including a touch enabled carousel'
 			]
-			
 		},
 		{ 
 			name: 'Hot Spot Rank',
@@ -17,8 +16,6 @@ module.exports = function() {
 			description: [
 				'Built a Node.js application that ranks public wifi hotspots by wifi health, with user-generated empirical speedtest data that persists in a MongoDB'
 			]
-			
 		}
-		
 	]	
 }()

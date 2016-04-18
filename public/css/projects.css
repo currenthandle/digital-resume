@@ -1,0 +1,5 @@
+#projects .project {
+  text-align: left;
+  margin-bottom: 5rem; }
+  #projects .project .name {
+    font-size: 1.6rem; }
