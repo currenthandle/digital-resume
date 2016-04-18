@@ -1,10 +1,19 @@
 #education {
-  padding-top: 5rem !important;
+  padding-top: 3rem 6rem 0 6rem;
   background-image: url("/img/lib.jpg");
   background-size: 100% 100%; }
   #education span, #education p {
-    background-color: rgba(255, 255, 255, 0.8);
     border-radius: .2rem;
-    -webkit-box-shadow: 0 0 0.9rem 0.8rem rgba(255, 255, 255, 0.8); }
+    width: 60%;
+    display: inline-block; }
+  #education .content-box {
+    background-color: rgba(255, 255, 255, 0.7) !important;
+    margin-top: 1.7rem !important;
+    margin-left: 9rem !important;
+    margin-right: 9rem !important;
+    padding-right: 0;
+    display: inline-block; }
+    #education .content-box p {
+      width: 90%; }
   #education #seal {
     width: 9.5rem; }

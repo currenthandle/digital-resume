@@ -1,14 +1,29 @@
 #education{
-	padding-top: 5rem !important;
+	padding-top: 3rem 6rem 0 6rem;
 	background-image: url('/img/lib.jpg');
 	background-size: 100% 100%;
 	.section-heading{
 		//font-size: 2rem;
 	}
 	span , p{
-		background-color: rgba(255, 255, 255, 0.8);
+		//background-color: rgba(255, 255, 255, 0.8);
 		border-radius: .2rem;
-		-webkit-box-shadow: 0 0 .9rem .8rem rgba(255, 255, 255, .8);
+		//-webkit-box-shadow: 0 0 .9rem .8rem rgba(255, 255, 255, .8);
+		//box-shadow: 0 0 .9rem .8rem rgba(255, 255, 255, .8);
+		width: 60%;
+		display: inline-block;
+	}
+	.content-box {
+		background-color: rgba(255, 255, 255, 0.7) !important; // HACKY !! something else is setting this. correct it!
+		margin-top: 1.7rem !important;
+		margin-left: 9rem !important;
+		margin-right: 9rem !important;
+		// HACKY !
+		padding-right: 0;
+		display: inline-block;
+		p {
+			width: 90%;	
+		}
 	}
 	#seal {
 		width: 9.5rem;

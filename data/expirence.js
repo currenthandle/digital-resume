@@ -7,7 +7,7 @@ module.exports = function() {
 			start: 'April 2015',
 			end: 'Present',
 			description: [
-				"Teach all aspects of modern DJing and music production with Ableton Live"
+				"One of the best parts of growing up in the internet era is the ability to find info about anything at the click of a button. Need to figure out how to how to budget for your first apartment? There’s a guide out there for that. Trying to update your wardrobe without dropping a couple Benjamins? Can do. Wanna know how to cook a grilled cheese that’s on par with crack? No problem!"
 			]
 		},
 		{ 
@@ -17,7 +17,7 @@ module.exports = function() {
 			start: 'May 2014',
 			end: 'Present',
 			description: [
-				"Coordinate multiple large teams to produce large scale public events"
+				"One of the best parts of growing up in the internet era is the ability to find info about anything at the click of a button. Need to figure out how to how to budget for your first apartment? There’s a guide out there for that. Trying to update your wardrobe without dropping a couple Benjamins? Can do. Wanna know how to cook a grilled cheese that’s on par with crack? No problem!"
 			]
 		},
 		{ 
@@ -27,8 +27,7 @@ module.exports = function() {
 			start: 'July 2011',
 			end: 'August 2012',
 			description: [
-				"Developed Ubokia brand and online marketing strategy",
-				"Designed and tested UI & UX for Ubokia.com pages & features"
+				"One of the best parts of growing up in the internet era is the ability to find info about anything at the click of a button. Need to figure out how to how to budget for your first apartment? There’s a guide out there for that. Trying to update your wardrobe without dropping a couple Benjamins? Can do. Wanna know how to cook a grilled cheese that’s on par with crack? No problem!"
 			]
 		},
 		{ 
@@ -38,7 +37,7 @@ module.exports = function() {
 			start: 'November 2010',
 			end: 'October 2011',
 			description: [
-		 		"Managed college marketing initiative for the entire Bay Area"
+				"One of the best parts of growing up in the internet era is the ability to find info about anything at the click of a button. Need to figure out how to how to budget for your first apartment? There’s a guide out there for that. Trying to update your wardrobe without dropping a couple Benjamins? Can do. Wanna know how to cook a grilled cheese that’s on par with crack? No problem!"
 			]
 		},
 		{ 
@@ -48,8 +47,7 @@ module.exports = function() {
 			start: 'May 2009',
 			end: 'Aug 2009',
 			description: [
-				"Sold commercial packaging solutions",
-				"Managed office IT infrastructure, transitioned the company to the iPhone"
+				"One of the best parts of growing up in the internet era is the ability to find info about anything at the click of a button. Need to figure out how to how to budget for your first apartment? There’s a guide out there for that. Trying to update your wardrobe without dropping a couple Benjamins? Can do. Wanna know how to cook a grilled cheese that’s on par with crack? No problem!"
 			]
 		}
 		

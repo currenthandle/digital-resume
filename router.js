@@ -47,11 +47,13 @@ router.addRoute('/education', function(m) {
 		navGenerator(false),
 		h('div', { class: 'page-content', id: 'education' }, 
 		[
-			h('h2', { class: 'section-heading' }, h('span', 'Education')),
-			h('img', { id: 'seal', src: education.seal }),
-			h('h2', { id: 'school-name' },  h('span', education.name)),
-			h('h3', [ h('span', education.degree + ', ' + education.gradDate)]),
-			h('p', education.blurb )
+			h('div', { class: 'content-box' }, [
+				h('h2', { class: 'section-heading' }, h('span', 'Education')),
+				h('img', { id: 'seal', src: education.seal }),
+				h('h2', { id: 'school-name' },  h('span', education.name)),
+				h('h3', [ h('span', education.degree + ', ' + education.gradDate)]),
+				h('p', education.blurb )
+			])
 		])
 	])
 })
@@ -111,10 +113,11 @@ router.addRoute('/experience', function(m) {
 					h('div', { class: 'employer' }, job.employer),
 					h('div', { class: 'position' }, job.position),
 					h('div', { class: 'postion' }, job.postion),
+					h('div', { class: 'local' }, job.local),
 					h('div', { class: 'start' }, job.start),
 					h('span', { class: 'dash' }, '-'),
 					h('div', { class: 'end' }, job.end),
-					h('ul', { class: 'description' }, job.description.map(function(bulletPoint){
+					h('p', { class: 'description' }, job.description.map(function(bulletPoint){
 						return h('li', bulletPoint)
 					
 					}))
