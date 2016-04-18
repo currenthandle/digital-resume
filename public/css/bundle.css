@@ -139,7 +139,7 @@ html, body, #content, #index, .nav-container {
   #skills .skill-type h2:first-letter {
     text-transform: uppercase; }
   #skills .skill-type .sub-heading {
-    margin-top: .1rem; }
+    margin-top: 0; }
   #skills .skill-type table {
     display: inline-table;
     width: 100%; }
