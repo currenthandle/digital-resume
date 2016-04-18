@@ -7,6 +7,7 @@
     width: 60%;
     display: inline-block; }
   #education .content-box {
+    border-radius: 0.12rem !important;
     background-color: rgba(255, 255, 255, 0.7) !important;
     margin-top: 1.7rem !important;
     margin-left: 9rem !important;

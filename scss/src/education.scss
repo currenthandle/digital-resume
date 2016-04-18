@@ -14,6 +14,7 @@
 		display: inline-block;
 	}
 	.content-box {
+		border-radius: 0.12rem !important;
 		background-color: rgba(255, 255, 255, 0.7) !important; // HACKY !! something else is setting this. correct it!
 		margin-top: 1.7rem !important;
 		margin-left: 9rem !important;
