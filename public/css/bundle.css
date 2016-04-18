@@ -84,6 +84,7 @@ html, body, #content, #index, .nav-container {
     width: 9.5rem; }
 
 #skills .skill-type {
+  text-align: center;
   display: inline-block;
   width: 50%;
   vertical-align: top; }
