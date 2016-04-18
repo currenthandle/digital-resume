@@ -11,16 +11,16 @@ html, body, #content, #index, .nav-container {
 #index {
   display: table-row; }
   #index .nav-container {
-    background-color: rgba(209, 249, 208, 0.65);
+    background-color: #DE593A;
     box-sizing: border-box;
     padding-top: 3rem;
     vertical-align: top;
-    width: 20%;
+    width: 25%;
     display: table-cell; }
     #index .nav-container img {
       display: inline-block;
       width: 7rem;
-      border: .2rem solid orange;
+      border: .2rem solid white;
       border-radius: 10rem; }
     #index .nav-container ul {
       margin-right: 1rem;
@@ -31,8 +31,6 @@ html, body, #content, #index, .nav-container {
       #index .nav-container ul a {
         text-decoration: none; }
       #index .nav-container ul li a {
-        background-color: #90D4A8;
-        border: 0.1rem solid blue;
         border-radius: .4rem;
         text-align: center;
         display: inline-block;
@@ -41,37 +39,43 @@ html, body, #content, #index, .nav-container {
         width: 76%;
         font-size: 1.5rem;
         font-weight: bold;
-        color: orange; }
+        color: white; }
   #index .page-content {
-    background-color: #ffffe6;
+    background-color: #f9f9f9;
     box-sizing: border-box;
     vertical-align: top;
-    padding: 4.5rem 2rem 0 2rem;
+    padding: 0 2rem 0 2rem;
     text-align: center;
     display: table-cell;
-    width: 80%;
+    width: 75%;
     border-left: .1rem solid grey; }
     #index .page-content .section-heading {
       font-size: 2rem; }
     #index .page-content .sub-heading {
       font-size: 1.5rem;
       font-weight: bold; }
+    #index .page-content .content-box {
+      margin: 0 7% 2rem 7%;
+      padding: 2rem;
+      background-color: #fff;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.155);
+      border-radius: .1rem; }
 
 #home {
-  background-color: #ffffe6;
+  background-color: #f9f9f9;
   box-sizing: border-box;
   vertical-align: top;
   padding: 4.5rem 2rem 0 2rem;
   text-align: center;
   display: table-cell;
-  width: 80%;
+  width: 75%;
   border-left: .1rem solid grey; }
   #home h1 {
     font-weight: bold;
     font-size: 2.7rem; }
   #home img {
     display: inline;
-    border: .3rem solid orange;
+    border: .3rem solid #DE593A;
     border-radius: 20rem;
     width: 12rem; }
 
@@ -106,8 +110,12 @@ html, body, #content, #index, .nav-container {
 #projects .project {
   text-align: left;
   margin-bottom: 5rem; }
-  #projects .project .name {
-    font-size: 1.6rem; }
+  #projects .project .content-box {
+    display: inline-grid; }
+  #projects .project .img-wrapper {
+    text-align: center; }
+    #projects .project .img-wrapper img {
+      width: 100%; }
 
 #resume {
   text-align: center; }

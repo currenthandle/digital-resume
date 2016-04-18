@@ -60,7 +60,7 @@ router.addRoute('/skills', function(m) {
 		navGenerator(false),
 		h('div', { class: 'page-content', id: 'skills'  }, [
 			[h('h2', { class: 'section-heading' },  'Skills')].concat(skillsKeys.map(function(key) {
-				return h('div', { class: 'skill-type', id: key }, [
+				return h('div', { class: 'skill-type content-box', id: key }, [
 					h('h2', { class: 'sub-heading' }, key ),
 					h('table', skills[key].map(function(skill) {
 						return h('tr', [
@@ -89,10 +89,10 @@ router.addRoute('/projects', function(m) {
 		navGenerator(false),
 		h('div', { class: 'page-content', id: 'projects' }, [ h('h2', { class: 'section-heading' },  'Projects')]
 			.concat(projects.map(function(project){
-				return h('div', { class: 'project' }, [
+				return h('div', { class: 'project content-box' }, [
+					h('div', { class: 'img-wrapper' }, h('img', { src: project.img })),
 					h('div', { class: 'name sub-heading' }, project.name),
 					h('a', { href: project.link, class: 'project-link' }, project.link.substring(8)),
-					h('div', { class: 'role'}, project.role),
 					h('ul', { class: 'description' }, project.description.map(function(bulletPoint){
 						return h('li', bulletPoint)
 					
@@ -107,7 +107,7 @@ router.addRoute('/experience', function(m) {
 		navGenerator(false),
 		h('div', { class: 'page-content', id: 'experience' }, [h('h2', { class: 'section-heading' },  'Work Expirence')]
 			.concat(jobs.map(function(job){
-				return h('div', { class: 'job' }, [
+				return h('div', { class: 'job content-box' }, [
 					h('div', { class: 'employer' }, job.employer),
 					h('div', { class: 'local' }, job.local),
 					h('div', { class: 'postion' }, job.postion),
@@ -167,7 +167,7 @@ router.addRoute('/resume', function(m) {
 			]),
 			// Project
 			h('div', { id: 'projects' }, [h('h2', { class: 'section-heading' },  'Projects')].concat(projects.map(function(project){
-				return h('div', { class: 'project' }, [
+				return h('div', { class: 'project content-box' }, [
 					h('div', { class: 'name' }, project.name),
 					h('a', { href: project.link, class: 'project-link' }, project.link.substring(8)),
 					h('div', { class: 'role'}, project.role),

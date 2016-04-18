@@ -1,9 +1,18 @@
 #projects{
 	.project{
+		//border: .3rem solid brown;
+		.content-box{
+			display: inline-grid;
+		}		
+	
+		.img-wrapper{
+			text-align: center;	
+			img{
+				width: 100%;
+			}
+			
+		}
 		text-align: left;
 		margin-bottom: 5rem;
-		.name{
-			font-size: 1.6rem;
-		}
 	}
 }
