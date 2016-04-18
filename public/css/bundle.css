@@ -30,8 +30,8 @@ html, body, #content, #index, .nav-container {
       text-align: center; }
       #index .nav-container ul li:hover {
         background-color: rgba(124, 54, 2, 0.8); }
-      #index .nav-container ul li:active {
-        background-color: rgba(124, 54, 2, 0.8); }
+      #index .nav-container ul .active {
+        background-color: rgba(118, 112, 96, 0.51); }
       #index .nav-container ul a {
         text-decoration: none; }
       #index .nav-container ul li a {
@@ -62,7 +62,7 @@ html, body, #content, #index, .nav-container {
   font-weight: bold; }
 
 .content-box {
-  margin: 0 7% 2rem 7%;
+  margin: 1.5rem 7% 1rem 7%;
   padding: 2rem;
   background-color: #fff;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.155);

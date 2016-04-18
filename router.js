@@ -14,21 +14,30 @@ var tempString = "I am an allround web developer. I am a senior programmer with 
 
 //navContent.map((navItem) => h('li', h('a', { href: '/' + navItem.uri }, navItem.tabName)))
 
-function navGenerator(first) {
-	if (first){
-		return h('div', { class: 'nav-container' },  h('ul', 
-			navContent.map((navItem) => h('li', h('a', { href: '/' + navItem.uri }, navItem.tabName)))
-		))
-	} else {
+function navGenerator(route) {
+	if (route === '/'){
 		return h('div', { class: 'nav-container' },  h('ul', [
-			[h('a', { href: '/' }, h('img', { src: 'img/profile-img.jpg' }))]
-				.concat(navContent.map((navItem) => h('li', h('a', { href: '/' + navItem.uri }, navItem.tabName))))
+			navContent.map((navItem) => h('li', h('a', { href:  navItem.uri }, navItem.tabName)))
 		]))
+	} else {
+		return h('div', { class: 'nav-container' },  h('ul', [h('a', { href: '/' }, h('img', { src: 'img/profile-img.jpg' }))]
+			.concat(
+				navContent.map((navItem) => {
+					console.log('route', route)
+					console.log('navRoute', navItem.navRoute)
+					if(route === navItem.uri) {
+						return h('li', { class: 'active' }, h('a', {  href: navItem.uri }, navItem.tabName))
+					} else {
+						return h('li', h('a', { href: navItem.uri }, navItem.tabName))
+					}
+				})
+			)
+		))
 	}
 }
 router.addRoute('/', function(m) {
 	return h('div', { id: 'index' }, [
-		navGenerator(true),
+		navGenerator(m.route),
 		h('div', { class: 'page-content' , id: 'home'}, h('div', { class: 'content-box' }, [
 			h('img', { src: 'img/profile-img.jpg' }),
 			h('h1', 'Casey Siebel'),
@@ -40,7 +49,7 @@ router.addRoute('/', function(m) {
 })
 router.addRoute('/education', function(m) {
 	return h('div', { id: 'index' }, [
-		navGenerator(false),
+		navGenerator(m.route),
 		h('div', { class: 'page-content', id: 'education' }, 
 		[
 			h('div', { class: 'content-box' }, [
@@ -54,7 +63,7 @@ router.addRoute('/education', function(m) {
 })
 router.addRoute('/skills', function(m) {
 	return h('div', { id: 'index' }, [
-		navGenerator(false),
+		navGenerator(m.route),
 		h('div', { class: 'page-content', id: 'skills'  }, [
 			skillsKeys.map(function(key) {
 				return h('div', { class: 'skill-type content-box', id: key }, [
@@ -83,7 +92,7 @@ router.addRoute('/skills', function(m) {
 })
 router.addRoute('/projects', function(m) {
 	return h('div', { id: 'index' }, [
-		navGenerator(false),
+		navGenerator(m.route),
 		h('div', { class: 'page-content', id: 'projects' }, projects.map(function(project){
 			return h('div', { class: 'project content-box' }, [
 				h('div', { class: 'img-wrapper' }, h('img', { src: project.img })),
@@ -99,24 +108,22 @@ router.addRoute('/projects', function(m) {
 })
 router.addRoute('/experience', function(m) {
 	return h('div', { id: 'index' }, [
-		navGenerator(false),
-		h('div', { class: 'page-content', id: 'experience' }, [h('h2', { class: 'section-heading' },  'Work Expirence')]
-			.concat(jobs.map(function(job){
-				return h('div', { class: 'job content-box' }, [
-					h('div', { class: 'employer' }, job.employer),
-					h('div', { class: 'position' }, job.position),
-					h('div', { class: 'postion' }, job.postion),
-					h('div', { class: 'local' }, job.local),
-					h('div', { class: 'start' }, job.start),
-					h('span', { class: 'dash' }, '-'),
-					h('div', { class: 'end' }, job.end),
-					h('p', { class: 'description' }, job.description.map(function(bulletPoint){
-						return h('li', bulletPoint)
-					
-					}))
-				])
-			}))
-		)
+		navGenerator(m.route),
+		h('div', { class: 'page-content', id: 'experience' }, jobs.map(function(job){
+			return h('div', { class: 'job content-box' }, [
+				h('div', { class: 'employer' }, job.employer),
+				h('div', { class: 'position' }, job.position),
+				h('div', { class: 'postion' }, job.postion),
+				h('div', { class: 'local' }, job.local),
+				h('div', { class: 'start' }, job.start),
+				h('span', { class: 'dash' }, '-'),
+				h('div', { class: 'end' }, job.end),
+				h('p', { class: 'description' }, job.description.map(function(bulletPoint){
+					return h('li', bulletPoint)
+				
+				}))
+			])
+		}))
 	])
 })
 
