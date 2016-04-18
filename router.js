@@ -109,9 +109,10 @@ router.addRoute('/experience', function(m) {
 			.concat(jobs.map(function(job){
 				return h('div', { class: 'job content-box' }, [
 					h('div', { class: 'employer' }, job.employer),
-					h('div', { class: 'local' }, job.local),
+					h('div', { class: 'position' }, job.position),
 					h('div', { class: 'postion' }, job.postion),
 					h('div', { class: 'start' }, job.start),
+					h('span', { class: 'dash' }, '-'),
 					h('div', { class: 'end' }, job.end),
 					h('ul', { class: 'description' }, job.description.map(function(bulletPoint){
 						return h('li', bulletPoint)

@@ -1,0 +1,22 @@
+#index{
+	#experience{
+		.content-box{
+			text-align: left;	
+			.employer , .position {
+				display: inline;
+			}
+			.employer {
+				padding-right: 2%;
+				margin-right: 2%;
+				border-right: .1rem solid rgba(128, 128, 128, .6);
+			}
+			.start , .end {
+				display: inline;
+			}
+			.dash {
+				font-size: 2rem;
+			}
+			
+		}
+	}	
+}

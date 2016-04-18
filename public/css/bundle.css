@@ -117,6 +117,19 @@ html, body, #content, #index, .nav-container {
     #projects .project .img-wrapper img {
       width: 100%; }
 
+#index #experience .content-box {
+  text-align: left; }
+  #index #experience .content-box .employer, #index #experience .content-box .position {
+    display: inline; }
+  #index #experience .content-box .employer {
+    padding-right: 2%;
+    margin-right: 2%;
+    border-right: 0.1rem solid rgba(128, 128, 128, 0.6); }
+  #index #experience .content-box .start, #index #experience .content-box .end {
+    display: inline; }
+  #index #experience .content-box .dash {
+    font-size: 2rem; }
+
 #resume {
   text-align: center; }
   #resume #resume-heading {
