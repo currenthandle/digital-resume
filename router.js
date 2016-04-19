@@ -51,12 +51,14 @@ router.addRoute('/', function(m) {
 		]))
 	])
 })
+/*
 router.addRoute('/about', function(m) {
 	return h('div', { id: 'index' }, [
 		navGenerator(m.route),
 		h('div', { class: 'page-content', id: 'about' }, 'ABOUT')
 	])
 })
+*/
 router.addRoute('/education', function(m) {
 	var education = require('./data/education.js')
 	return h('div', { id: 'index' }, [
@@ -106,8 +108,6 @@ router.addRoute('/skills', function(m) {
 	])
 })
 function tagGenerator (content) {
-	//console.log('content', content)
-	//console.log('content.tags', content.tags)
 	return  h('div', { class: 'tag-wrapper' }, content.tags.map((tag) => h('span', {class: 'tag' },  tag)))
 }
 router.addRoute('/projects', function(m) {
@@ -116,20 +116,16 @@ router.addRoute('/projects', function(m) {
 		navGenerator(m.route),
 		h('div', { class: 'page-content', id: 'projects' }, projects.map(function(project){
 			return h('div', { class: 'project content-box' }, [
-				h('div', { class: 'img-wrapper' }, h('img', { src: project.img })),
+				h('div', { class: 'img-wrapper' }, h('a', { href: project.link }, (h('img', { src: project.img })))),
 				h('div', { class: 'name sub-heading' }, project.name),
-				h('a', { href: project.link, class: 'project-link' }, project.link.substring(8)),
-				h('ul', { class: 'description' }, project.description.map(function(bulletPoint){
-					return h('li', bulletPoint)
-				})),
-				console.log('project', project),
+				h('p', { class: 'description' }, project.description),
 				tagGenerator(project)
 			])
 		}))
 	])
 })
 router.addRoute('/experience', function(m) {
-	var jobs = require('./data/expirence')
+	var jobs = require('./data/experience')
 	return h('div', { id: 'index' }, [
 		navGenerator(m.route),
 		h('div', { class: 'page-content', id: 'experience' }, jobs.map(function(job){

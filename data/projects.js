@@ -5,10 +5,7 @@ module.exports = function() {
 			link: 'https://blue-goji.herokuapp.com',
 			role: 'Developer',
 			img: 'img/blue-goji.png',
-			description: [
-				'Built fully responsive views according to the client\'s specifications',
-				'Wrote front end scripts and a simple Node.js server to achieve the client\'s desired features including a touch enabled carousel'
-			],
+			description: 'Bluegoji is a gaming system ment to be played while exercising. The agency who was hired to produce the content for the website was unhappy with the landing page and hired me to make a new one for their portfolio. This page is fully responsive and features a swipe enabled carousel. The app is makes heavy use of Bootstap and Javascript.',
 			tags: [
 				'Javascript',
 				'HTML',
@@ -22,11 +19,9 @@ module.exports = function() {
 			link: 'https://hot-spot-rank.herokuapp.com',
 			role: 'Developer',
 			img: 'img/hot-spot.png',
-			description: [
-				'Built a Node.js application that ranks public wifi hotspots by wifi health, with user-generated empirical speedtest data that persists in a MongoDB'
-			],
+			description: 'Hot Spot Rank is a application similar to Yelp.com but for public WiFi hot spots. However, instead of using reviews to rank the hot spots this app uses empirical speedtest data. The backend is build using the Express.js framework and the data persists in a MongoDB. The UI is limited but incorporates some Bootstrap.',
 			tags: [
-				'Node.js',
+				'Express.js',
 				'MongoDB',
 				'EJS',
 				'Bootsrap',

@@ -61,8 +61,7 @@ html, body, #content, #index, .nav-container {
     padding: 0 2rem 0 2rem;
     text-align: center;
     display: table-cell;
-    width: 75%;
-    border-left: .1rem solid grey; }
+    width: 75%; }
 
 .section-heading {
   font-size: 2rem; }
@@ -140,7 +139,7 @@ html, body, #content, #index, .nav-container {
 #skills .skill-type {
   text-align: center;
   display: inline-block;
-  width: 50%;
+  width: 60%;
   vertical-align: top; }
   #skills .skill-type ul {
     list-style-type: none; }
