@@ -9,6 +9,7 @@ var tempString = "I am an allround web developer. I am a senior programmer with 
 
 function navGenerator(route) {
 	var navContent = require('./data/nav-routes.js')
+	var externalLinks = require('./data/external-links')
 	/*
 	function tabsGenerator(active) {
 		navContent.map((navItem) => {
@@ -21,9 +22,11 @@ function navGenerator(route) {
 
 	}
 	*/
+	var externalList = externalLinks.map((link) => h('a', { href: link.uri }, h('i', { class: link.class, 'aria-hidden': 'true'})))
+	var externalsDiv = h('div', { id: 'external-links' }, externalList )
 	if (route === '/'){
 		return h('div', { class: 'nav-container' },  h('ul', [
-			navContent.map((navItem) => h('li', h('a', { href:  navItem.uri }, h('div', navItem.tabName))))
+			(navContent.map((navItem) => h('li', h('a', { href:  navItem.uri }, h('div', navItem.tabName))))).concat(externalsDiv)
 		]))
 	} else {
 		return h('div', { class: 'nav-container' },  h('ul', [h('a', { href: '/' }, h('img', { src: 'img/profile-img.jpg' }))]
@@ -42,13 +45,17 @@ function navGenerator(route) {
 router.addRoute('/', function(m) {
 	return h('div', { id: 'index' }, [
 		navGenerator(m.route),
-		h('div', { class: 'page-content' , id: 'home'}, h('div', { class: 'content-box' }, [
-			h('img', { src: 'img/profile-img.jpg' }),
-			h('h1', 'Casey Siebel'),
-			h('div', 'Oakland, CA'),
-			h('h3', 'About Me'),
-			h('p', tempString)
-		]))
+		h('div', { class: 'page-content' , id: 'home'}, [
+			h('div', { class: 'vertical-line' }),
+			h('div', { class: 'vertical-line' }),
+			h('div', { class: 'content-box' }, [
+				h('img', { src: 'img/profile-img.jpg' }),
+				h('h1', 'Casey Siebel'),
+				h('div', 'Oakland, CA'),
+				h('h3', 'About Me'),
+				h('p', tempString)
+			])
+		])
 	])
 })
 /*

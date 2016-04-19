@@ -58,7 +58,7 @@ html, body, #content, #index, .nav-container {
     background-color: #f9f9f9;
     box-sizing: border-box;
     vertical-align: top;
-    padding: 0 2rem 0 2rem;
+    padding: 0 2rem 0 .2rem;
     text-align: center;
     display: table-cell;
     width: 75%; }
@@ -93,6 +93,16 @@ html, body, #content, #index, .nav-container {
   text-align: center;
   display: inline-block; }
 
+.external-links a {
+  width: 50%; }
+
+.vertical-line {
+  background-color: rgba(124, 54, 2, 0.8);
+  float: left;
+  height: 100%;
+  width: .2rem;
+  margin-right: .2rem; }
+
 #home {
   background-color: #f9f9f9;
   box-sizing: border-box;
@@ -100,8 +110,7 @@ html, body, #content, #index, .nav-container {
   padding: 4.5rem 2rem 0 2rem;
   text-align: center;
   display: table-cell;
-  width: 75%;
-  border-left: .1rem solid grey; }
+  width: 75%; }
   #home h1 {
     font-weight: bold;
     font-size: 2.7rem; }
