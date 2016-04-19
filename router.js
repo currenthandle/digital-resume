@@ -9,20 +9,30 @@ var tempString = "I am an allround web developer. I am a senior programmer with 
 
 function navGenerator(route) {
 	var navContent = require('./data/nav-routes.js')
+	/*
+	function tabsGenerator(active) {
+		navContent.map((navItem) => {
+			if(route === navItem.uri) {
+				return h('li', { class: 'active' }, h('a', {  href: navItem.uri }, navItem.tabName))
+			} else {
+				return h('li', h('a', { href: navItem.uri }, h('div', navItem.tabName)))
+			}
+		})
+
+	}
+	*/
 	if (route === '/'){
 		return h('div', { class: 'nav-container' },  h('ul', [
-			navContent.map((navItem) => h('li', h('a', { href:  navItem.uri }, navItem.tabName)))
+			navContent.map((navItem) => h('li', h('a', { href:  navItem.uri }, h('div', navItem.tabName))))
 		]))
 	} else {
 		return h('div', { class: 'nav-container' },  h('ul', [h('a', { href: '/' }, h('img', { src: 'img/profile-img.jpg' }))]
 			.concat(
 				navContent.map((navItem) => {
-					console.log('route', route)
-					console.log('navRoute', navItem.navRoute)
 					if(route === navItem.uri) {
 						return h('li', { class: 'active' }, h('a', {  href: navItem.uri }, navItem.tabName))
 					} else {
-						return h('li', h('a', { href: navItem.uri }, navItem.tabName))
+						return h('li', h('a', { href: navItem.uri }, h('div', navItem.tabName)))
 					}
 				})
 			)
@@ -57,7 +67,9 @@ router.addRoute('/education', function(m) {
 				h('img', { id: 'seal', src: education.seal }),
 				h('h2', { id: 'school-name' },  h('span', education.name)),
 				h('h3', [ h('span', education.degree + ', ' + education.gradDate)]),
-				h('p', education.blurb )
+				h('div', { class: 'quote' }, education.quote),
+				h('div', { class: 'author' }, education.author),
+				h('div', { class: 'blurb' }, education.blurb)
 			])
 		])
 	])
@@ -129,10 +141,7 @@ router.addRoute('/experience', function(m) {
 				h('div', { class: 'start' }, job.start),
 				h('span', { class: 'dash' }, '-'),
 				h('div', { class: 'end' }, job.end),
-				h('p', { class: 'description' }, job.description.map(function(bulletPoint){
-					return h('li', bulletPoint)
-				
-				})),
+				h('p', { class: 'description' }, job.description),
 				tagGenerator(job)
 			])
 		}))

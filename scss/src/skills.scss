@@ -39,8 +39,10 @@
 					font-size: 1.1rem;
 				}
 				&:hover{
-					i {
-						transform: scale(1.46);
+					.fa-star{
+						transform: scale(1.6);
+						transition-duration: 900ms;
+							
 					}	
 				}
 			}

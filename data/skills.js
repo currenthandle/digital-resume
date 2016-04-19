@@ -28,6 +28,7 @@ module.exports = function() {
 		misc: [
 			{ name: 'Bash', score: '4'},
 			{ name: 'Git', score: '4'},
+			{ name: 'Heroku', score: '4'},
 			{ name: 'Browserify', score: '3'},
 			
 		]

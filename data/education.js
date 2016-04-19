@@ -1,10 +1,12 @@
-module.exports = function h () {
-	var obj = {}
-	obj.name = 'University of California, Berkeley'
-	obj.degree = 'B.A. in Physics'
-	obj.gradDate = 'December 2015'
-	obj.seal = 'img/seal-blue.png' 
-	obj.blurb = 'One of the best parts of growing up in the internet era is the ability to find info about anything at the click of a button. Need to figure out how to how to budget for your first apartment? There’s a guide out there for that. Trying to update your wardrobe without dropping a couple Benjamins? Can do. Wanna know how to cook a grilled cheese that’s on par with crack? No problem! /n /n If there’s something out there you want to know how to do, you can find it in a matter of minutes. Blogs can be some of the best sources of live-improving info, which is why we’ve decided to roundup some of the best sites on the web for college students. Take a look!'
-	
-	return obj
+module.exports = function () {
+	return {	
+		name: 'University of California, Berkeley',
+		degree: 'B.A. in Physics',
+		gradDate: 'December 2015',
+		seal: 'img/seal-blue.png',
+		
+		quote: "It from bit. Otherwise put, every 'it'-every particle, every field of force, even the space-time continuum itself-derives its function, its meaning, its very existence entirely-even if in some contexts indirectly-from the apparatus-elicited answers to yes-or-no questions, binary choices, bits.",
+		author: 'John Archibald Wheeler',
+		blurb: 'I entered Berkeley with my major undeclared but leaning strongly towards studying Computer Science or Economics. However, a series of courses I took on Astronomy and Cosmology drew my attention down a differnet path. A deeply seated discomfort caused by the seemingly nonesense nature of Quantum Mechanics galvanized my curiousity in the field of Physics. I was facinated when I first heard about Wheeler\'s "it from bit" and subsiquently found myself committed to a the field of Quantum Information Sciene.'	
+	}
 }()

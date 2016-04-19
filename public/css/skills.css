@@ -27,5 +27,6 @@
       color: rgba(222, 89, 58, 0.92);
       margin-left: .5rem;
       font-size: 1.1rem; }
-    #skills .skill-type table .skill-score:hover i {
-      transform: scale(1.46); }
+    #skills .skill-type table .skill-score:hover .fa-star {
+      transform: scale(1.6);
+      transition-duration: 900ms; }
