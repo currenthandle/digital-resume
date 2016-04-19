@@ -74,7 +74,7 @@ html , body , #content , #index , .nav-container {
 		background-color: $page-background;
 		box-sizing: border-box;
 		vertical-align: top;
-		padding: 0 2rem 0 2rem;
+		padding: 0 2rem 0 .2rem;
 		text-align: center;
 		display: table-cell;
 		width: $content-width;
@@ -113,4 +113,16 @@ html , body , #content , #index , .nav-container {
 	text-align: center;
 	display: inline-block;
 
+}
+.external-links {
+	a{
+		width: 50%;
+	}
+}
+.vertical-line {
+	background-color: $brown-color;
+	float: left;
+	height: 100%;
+	width: .2rem;
+	margin-right: .2rem;
 }
