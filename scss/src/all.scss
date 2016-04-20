@@ -1,6 +1,7 @@
 body {
 	//background-color: rgba(222, 89, 58, 0.95);
 	margin: 0;
+	font-family: sans-serif;
 }
 html , body , #content , #index , .nav-container {
 	height: 100%;
@@ -15,13 +16,13 @@ html , body , #content , #index , .nav-container {
 		position: fixed;
 		background-color: $nav-background;
 		box-sizing: border-box;
-		padding-top: 3rem;
+		padding-top: 2.5rem;
 		vertical-align: top;
 		width: $nav-width;
 		display: table-cell;
 		img {
 			display: inline-block;
-			width: 7rem;
+			width: 7.2rem;
 			border: .2rem solid white;
 			border-radius: 10rem;
 			margin-bottom: 1rem;
@@ -82,6 +83,9 @@ html , body , #content , #index , .nav-container {
 		width: $content-width;
 		
 		border-left: .3rem solid $brown-color;
+		.content-box {
+			padding-top: 3.7rem;
+		}
 	}
 	.page-content:before {
 		border-left:  3px solid grey;
@@ -94,6 +98,9 @@ html , body , #content , #index , .nav-container {
 .sub-heading {
 	font-size: 1.5rem;
 	font-weight: bold;
+}
+.content-box:first-child{
+	margin-top: 3rem;
 }
 .content-box{
 	margin: 1.5rem 7% 1rem 7%;

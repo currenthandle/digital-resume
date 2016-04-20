@@ -50,8 +50,6 @@ router.addRoute('/', function(m) {
 	return h('div', { id: 'index' }, [
 		navGenerator(m.route),
 		h('div', { class: 'page-content' , id: 'home'}, [
-			h('div', { class: 'vertical-line' }),
-			h('div', { class: 'vertical-line' }),
 			h('div', { class: 'content-box' }, [
 				h('img', { src: 'img/profile-img.jpg' }),
 				h('h1', 'Casey Siebel'),
