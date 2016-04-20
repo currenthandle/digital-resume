@@ -11,6 +11,8 @@ html, body, #content, #index, .nav-container {
 
 #index {
   display: table-row; }
+  #index .nav-home {
+    padding-top: 6.8rem !important; }
   #index .nav-container {
     position: fixed;
     background-color: rgba(222, 89, 58, 0.95);
@@ -145,6 +147,8 @@ html, body, #content, #index, .nav-container {
     border: .3rem solid #DE593A;
     border-radius: 20rem;
     width: 12rem; }
+  #home .quote {
+    font-style: italic; }
 
 #education {
   padding-top: 3rem 6rem 0 6rem;
@@ -224,8 +228,6 @@ html, body, #content, #index, .nav-container {
     border-right: 0.1rem solid rgba(128, 128, 128, 0.6); }
   #index #experience .content-box .start, #index #experience .content-box .end {
     display: inline; }
-  #index #experience .content-box .dash {
-    font-size: 2rem; }
 
 #resume {
   text-align: center; }

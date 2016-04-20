@@ -25,7 +25,7 @@ function navGenerator(route) {
 	var externalList = externalLinks.map((link) => h('a', { href: link.uri }, h('i', { class: link.class, 'aria-hidden': 'true'})))
 	var externalsDiv = h('div', { id: 'external-links' }, externalList )
 	if (route === '/'){
-		return h('div', { class: 'nav-container' },  [
+		return h('div', { class: 'nav-container nav-home ' },  [
 			h('ul', navContent.map((navItem) => h('li', h('a', { href:  navItem.uri }, h('div', navItem.tabName))))),
 			externalsDiv	
 		])
@@ -47,15 +47,16 @@ function navGenerator(route) {
 	}
 }
 router.addRoute('/', function(m) {
+	var info = require('./data/home.js')
 	return h('div', { id: 'index' }, [
 		navGenerator(m.route),
 		h('div', { class: 'page-content' , id: 'home'}, [
 			h('div', { class: 'content-box' }, [
-				h('img', { src: 'img/profile-img.jpg' }),
-				h('h1', 'Casey Siebel'),
-				h('div', 'Oakland, CA'),
-				h('h3', 'About Me'),
-				h('p', tempString)
+				h('img', { src: info.img }),
+				h('p', { class: 'quote' }, info.quote),
+				h('h1', { class: 'name' }, info.name),
+				h('span', { class: 'local' }, info.local),
+				h('p', { class: 'blurb' }, info.blurb)
 			])
 		])
 	])

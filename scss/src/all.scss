@@ -12,6 +12,9 @@ html , body , #content , #index , .nav-container {
 }
 #index {
 	display: table-row;
+	.nav-home {
+		padding-top: 6.8rem !important;
+	}
 	.nav-container{
 		position: fixed;
 		background-color: $nav-background;
