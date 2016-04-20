@@ -56,16 +56,17 @@ html , body , #content , #index , .nav-container {
 			}
 			li:hover {
 				background-color: rgba(124, 54, 2, .8);	
+					a{
+					}	
 			}
 			.active{
 				//background-color: rgba(118, 112, 96, .51);
 				background-color: #f9f9f9;
-				a {
-					color: black;
-				}
 				&:hover{
 					background-color: #f9f9f9;
-			
+				}
+				a {
+					color: black;
 				}
 			}
 		}
@@ -74,11 +75,12 @@ html , body , #content , #index , .nav-container {
 		background-color: $page-background;
 		box-sizing: border-box;
 		vertical-align: top;
-		padding: 0 2rem 0 .2rem;
+		padding: 0 2rem 0 .25rem;
 		text-align: center;
 		display: table-cell;
 		width: $content-width;
-		//border-left: .1rem solid grey;
+		
+		border-left: .1rem solid $brown-color;
 	}
 }
 
@@ -114,15 +116,34 @@ html , body , #content , #index , .nav-container {
 	display: inline-block;
 
 }
-.external-links {
+#external-links {
+	text-align: center;
+	margin-top:  2.4rem;
 	a{
-		width: 50%;
+		margin: 0 1rem 0 1rem;
+		i{
+			color: white;
+			font-size: 4rem;
+			&:hover{
+				transform: scale(1.3);
+				transition-duration: 500ms;
+						
+			}
+		}
 	}
 }
+/*
+.vertical-line:first-child {
+	//padding-: .2rem;
+
+}
+
+
 .vertical-line {
 	background-color: $brown-color;
 	float: left;
 	height: 100%;
-	width: .2rem;
+	padding: 0 .11rem 0 .11rem;
 	margin-right: .2rem;
 }
+	*/
