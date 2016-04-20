@@ -36,7 +36,7 @@ function navGenerator(route) {
 					navContent.map((navItem) => {
 						if(route === navItem.uri) {
 							return h('li', { class: 'active' }, h('a', {  href: navItem.uri }, navItem.tabName))
-						} else {
+						 }else {
 							return h('li', { class: 'in-active' }, h('a', {  href: navItem.uri }, navItem.tabName))
 						}
 					})
@@ -145,7 +145,7 @@ router.addRoute('/experience', function(m) {
 				h('div', { class: 'postion' }, job.postion),
 				h('div', { class: 'local' }, job.local),
 				h('div', { class: 'start' }, job.start),
-				h('span', { class: 'dash' }, '-'),
+				h('span', { class: 'dash' }, '\u2014'),
 				h('div', { class: 'end' }, job.end),
 				h('p', { class: 'description' }, job.description),
 				tagGenerator(job)
