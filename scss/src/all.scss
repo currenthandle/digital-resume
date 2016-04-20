@@ -1,4 +1,5 @@
 body {
+	//background-color: rgba(222, 89, 58, 0.95);
 	margin: 0;
 }
 html , body , #content , #index , .nav-container {
@@ -80,7 +81,10 @@ html , body , #content , #index , .nav-container {
 		display: table-cell;
 		width: $content-width;
 		
-		border-left: .1rem solid $brown-color;
+		border-left: .3rem solid $brown-color;
+	}
+	.page-content:before {
+		border-left:  3px solid grey;
 	}
 }
 
