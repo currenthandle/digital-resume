@@ -16,6 +16,7 @@ html , body , #content , #index , .nav-container {
 		padding-top: 6.8rem !important;
 	}
 	.nav-container{
+		//border-right: .3rem solid green;
 		position: fixed;
 		background-color: $nav-background;
 		box-sizing: border-box;
@@ -38,6 +39,8 @@ html , body , #content , #index , .nav-container {
 			width: 100%;
 			text-align: center;
 			li{ 
+				padding-left:  20%;
+				padding-right:  20%;
 				a{
 					div{
 						/*
