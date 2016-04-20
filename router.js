@@ -25,21 +25,25 @@ function navGenerator(route) {
 	var externalList = externalLinks.map((link) => h('a', { href: link.uri }, h('i', { class: link.class, 'aria-hidden': 'true'})))
 	var externalsDiv = h('div', { id: 'external-links' }, externalList )
 	if (route === '/'){
-		return h('div', { class: 'nav-container' },  h('ul', [
-			(navContent.map((navItem) => h('li', h('a', { href:  navItem.uri }, h('div', navItem.tabName))))).concat(externalsDiv)
-		]))
+		return h('div', { class: 'nav-container' },  [
+			h('ul', navContent.map((navItem) => h('li', h('a', { href:  navItem.uri }, h('div', navItem.tabName))))),
+			externalsDiv	
+		])
 	} else {
-		return h('div', { class: 'nav-container' },  h('ul', [h('a', { href: '/' }, h('img', { src: 'img/profile-img.jpg' }))]
-			.concat(
-				navContent.map((navItem) => {
-					if(route === navItem.uri) {
-						return h('li', { class: 'active' }, h('a', {  href: navItem.uri }, navItem.tabName))
-					} else {
-						return h('li', h('a', { href: navItem.uri }, h('div', navItem.tabName)))
-					}
-				})
-			)
-		))
+		return h('div', { class: 'nav-container' }, [ 
+			h('ul', [h('a', { href: '/' }, h('img', { src: 'img/profile-img.jpg' }))]
+				.concat(
+					navContent.map((navItem) => {
+						if(route === navItem.uri) {
+							return h('li', { class: 'active' }, h('a', {  href: navItem.uri }, navItem.tabName))
+						} else {
+							return h('li', { class: 'in-active' }, h('a', {  href: navItem.uri }, navItem.tabName))
+						}
+					})
+				)
+			),
+			externalsDiv 
+		])
 	}
 }
 router.addRoute('/', function(m) {

@@ -16,7 +16,7 @@ html, body, #content, #index, .nav-container {
     box-sizing: border-box;
     padding-top: 3rem;
     vertical-align: top;
-    width: 25%;
+    width: 26%;
     display: table-cell; }
     #index .nav-container img {
       display: inline-block;
@@ -50,18 +50,21 @@ html, body, #content, #index, .nav-container {
         background-color: rgba(124, 54, 2, 0.8); }
       #index .nav-container ul .active {
         background-color: #f9f9f9; }
-        #index .nav-container ul .active a {
-          color: black; }
         #index .nav-container ul .active:hover {
           background-color: #f9f9f9; }
+        #index .nav-container ul .active a {
+          color: black; }
   #index .page-content {
     background-color: #f9f9f9;
     box-sizing: border-box;
     vertical-align: top;
-    padding: 0 2rem 0 .2rem;
+    padding: 0 2rem 0 .25rem;
     text-align: center;
     display: table-cell;
-    width: 75%; }
+    width: 74%;
+    border-left: 0.3rem solid rgba(124, 54, 2, 0.8); }
+  #index .page-content:before {
+    border-left: 3px solid grey; }
 
 .section-heading {
   font-size: 2rem; }
@@ -93,16 +96,33 @@ html, body, #content, #index, .nav-container {
   text-align: center;
   display: inline-block; }
 
-.external-links a {
-  width: 50%; }
+#external-links {
+  text-align: center;
+  margin-top: 2.4rem; }
+  #external-links a {
+    margin: 0 1rem 0 1rem; }
+    #external-links a i {
+      color: white;
+      font-size: 4rem; }
+      #external-links a i:hover {
+        transform: scale(1.3);
+        transition-duration: 500ms; }
+
+/*
+.vertical-line:first-child {
+	//padding-: .2rem;
+
+}
+
 
 .vertical-line {
-  background-color: rgba(124, 54, 2, 0.8);
-  float: left;
-  height: 100%;
-  width: .2rem;
-  margin-right: .2rem; }
-
+	background-color: $brown-color;
+	float: left;
+	height: 100%;
+	padding: 0 .11rem 0 .11rem;
+	margin-right: .2rem;
+}
+	*/
 #home {
   background-color: #f9f9f9;
   box-sizing: border-box;
@@ -110,7 +130,7 @@ html, body, #content, #index, .nav-container {
   padding: 4.5rem 2rem 0 2rem;
   text-align: center;
   display: table-cell;
-  width: 75%; }
+  width: 74%; }
   #home h1 {
     font-weight: bold;
     font-size: 2.7rem; }
