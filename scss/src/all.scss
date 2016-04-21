@@ -8,22 +8,25 @@ html , body , #content , #index , .nav-container {
 }
 #content{
 	width: 100%;
-	display: table;
+	//display: table;
 }
 #index {
-	display: table-row;
+	//display: table-row;
 	.nav-home {
 		padding-top: 6.8rem !important;
 	}
 	.nav-container{
+		float: left;
+		overflow: auto;
+		height: 100%;
 		//border-right: .3rem solid green;
-		position: fixed;
+		//position: fixed;
 		background-color: $nav-background;
 		box-sizing: border-box;
 		padding-top: 2.5rem;
 		vertical-align: top;
 		width: $nav-width;
-		display: table-cell;
+		//display: table-cell;
 		img {
 			display: inline-block;
 			width: 7.2rem;
@@ -85,10 +88,13 @@ html , body , #content , #index , .nav-container {
 		vertical-align: top;
 		padding: 0 2rem 0 .25rem;
 		text-align: center;
-		display: table-cell;
+		//display: table-cell;
 		width: $content-width;
+		float: left;
+		overflow: auto;
+		height: 100%;
 		
-		border-left: .3rem solid $brown-color;
+		border-left: .3rem solid rgba(124, 54, 2, 1); 
 		.content-box {
 			padding-top: 3.7rem;
 		}
