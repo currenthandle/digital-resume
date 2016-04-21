@@ -154,6 +154,29 @@ router.addRoute('/experience', function(m) {
 	])
 })
 
+router.addRoute('/contact', function(m) {
+	return h('div', { id: 'index' }, [
+		navGenerator(m.route),
+		h('div', { class: 'page-content', id: 'contact' },
+			h('div', { class: 'content-box' }, 
+				h('form', [
+					h('div', { class: 'name' }, [
+						h('span', 'Name'),
+						h('input', { type: 'text',  name: 'name' }),
+					]),
+					h('div', { class: 'email' }, [
+						h('span', 'E-mail'),
+						h('input', { type: 'text',  name: 'email' }),
+					]),
+					h('div', { class: 'message' }, [
+						h('span', 'message'),
+						h('input', { type: 'text',  name: 'message' }),
+					])
+				])
+			)
+		)	
+	])
+})
 router.addRoute('/resume', function(m) {
 	return h('div', { id: 'resume' }, [
 		h('div', { id: 'resume-heading' }, [
@@ -225,3 +248,4 @@ router.addRoute('/resume', function(m) {
 		])
 	])
 })
+

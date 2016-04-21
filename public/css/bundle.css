@@ -19,7 +19,7 @@ html, body, #content, #index, .nav-container {
   box-sizing: border-box;
   padding-top: 2.5rem;
   vertical-align: top;
-  width: 20%; }
+  width: 22%; }
   #index .nav-container img {
     display: inline-block;
     width: 7.2rem;
@@ -39,7 +39,7 @@ html, body, #content, #index, .nav-container {
         border-radius: .4rem;
         text-align: center;
         display: inline-block;
-        padding: 1.85rem 0 1.85rem 0;
+        padding: 1.35rem 0 1.35rem 0;
         font-size: 1.5rem;
         font-weight: bold;
         color: white;
@@ -66,7 +66,7 @@ html, body, #content, #index, .nav-container {
   vertical-align: top;
   padding: 0 2rem 0 .25rem;
   text-align: center;
-  width: 80%;
+  width: 78%;
   float: left;
   overflow: auto;
   height: 100%;
@@ -117,7 +117,7 @@ html, body, #content, #index, .nav-container {
     margin: 0 1rem 0 1rem; }
     #external-links a i {
       color: white;
-      font-size: 4rem;
+      font-size: 3rem;
       transition: all 300ms ease-in-out; }
       #external-links a i:hover {
         transform: scale(1.3); }
@@ -144,7 +144,7 @@ html, body, #content, #index, .nav-container {
   padding: 4.5rem 2rem 0 2rem;
   text-align: center;
   display: table-cell;
-  width: 80%; }
+  width: 78%; }
   #home h1 {
     font-weight: bold;
     font-size: 2.7rem; }
