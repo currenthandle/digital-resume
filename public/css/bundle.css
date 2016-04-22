@@ -11,6 +11,30 @@ html, body, #content, #index {
 #index .nav-home {
   padding-top: 6.8rem !important; }
 
+@media (max-width: 1000px) {
+  #index #min-externals {
+    background-color: rgba(222, 89, 58, 0.95);
+    text-align: center;
+    border-top: 0.12rem solid rgba(124, 54, 2, 0.8); }
+    #index #min-externals > div {
+      display: inline-block;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem; }
+    #index #min-externals a:first-child {
+      margin-right: 1.8rem; }
+    #index #min-externals a:last-child {
+      margin-left: 1.8rem; }
+    #index #min-externals a i {
+      color: white;
+      font-size: 2.5rem;
+      transition: all 300ms ease-in-out; }
+      #index #min-externals a i:hover {
+        transform: scale(1.3); } }
+
+@media (min-width: 1000px) {
+  #index #min-externals {
+    display: none; } }
+
 #index .nav-container {
   overflow: auto;
   background-color: rgba(222, 89, 58, 0.95);
