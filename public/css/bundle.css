@@ -156,8 +156,6 @@ html, body, #content, #index {
       float: left;
       border-left: 0.2rem solid #7c3602;
       width: 78%; } }
-  #index .page-content .content-box {
-    padding-top: 2.3rem; }
 
 #index .page-content:before {
   border-left: 3px solid grey; }
