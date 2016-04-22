@@ -142,6 +142,7 @@ html, body, #content, #index {
   overflow: auto; }
   @media (max-width: 1000px) {
     #index .page-content {
+      padding-bottom: 1.7rem;
       border-top: 0.3rem solid #7c3602;
       width: 100%; } }
   @media (min-width: 1000px) {

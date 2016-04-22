@@ -193,6 +193,7 @@ html , body , #content , #index {
 		height: 100%;
 		overflow: auto;
 		@media (max-width: $break-point) {
+			padding-bottom: 1.7rem;
 			border-top: .3rem solid rgba(124, 54, 2, 1); 
 			width: 100%;
 		}
