@@ -60,9 +60,16 @@ html , body , #content , #index {
 				display: none;
 			}
 			ul{
+				margin-top: -.2.8rem !important;
 				display: none;
 				a {
-					padding-left: 1% !important;
+					//padding-left: 1% !important;
+					padding: .7rem 0 .7rem 1% !important;
+					font-size: 1.3rem !important; 
+				}
+				li:last-child {
+					//padding-bottom: 1rem;
+					margin-bottom:.5rem;
 				}
 				i {
 					margin-right: 1rem !important;
@@ -76,7 +83,7 @@ html , body , #content , #index {
 				color: white;
 				padding-bottom: 0;
 				overflow: auto;
-				margin-bottom: 16px;
+				margin-bottom: 1rem;
 				.copy{
 					float: left;	
 					margin-left: 5%;
@@ -104,6 +111,8 @@ html , body , #content , #index {
 		@media (min-width: $break-point) {
 			img {
 				display: inline-block;
+				margin-top: 2rem;
+				margin-bottom: 0;
 			}
 			.min-content {
 				display: none;
@@ -111,7 +120,7 @@ html , body , #content , #index {
 			height: 100%;
 			float: left;
 		}
-		overflow: auto;
+		//overflow: auto;
 		//border-right: .3rem solid green;
 		//position: fixed;
 		background-color: $nav-background;
@@ -187,24 +196,24 @@ html , body , #content , #index {
 		background-color: $page-background;
 		box-sizing: border-box;
 		vertical-align: top;
-		padding: 0 2rem 0 .25rem;
+		padding: 0 .25rem 0 .25rem;
 		text-align: center;
 		//display: table-cell;
 		height: 100%;
 		overflow: auto;
+		padding-bottom: 1.7rem;
 		@media (max-width: $break-point) {
-			padding-bottom: 1.7rem;
-			border-top: .3rem solid rgba(124, 54, 2, 1); 
+			border-top: .2rem solid rgba(124, 54, 2, 1); 
 			width: 100%;
 		}
 		@media (min-width: $break-point){
 			float: left;
-			border-left: .3rem solid rgba(124, 54, 2, 1); 
+			border-left: .2rem solid rgba(124, 54, 2, 1); 
 			width: $content-width;
 		}
 		
 		.content-box {
-			padding-top: 3.7rem;
+			padding-top: 2.3rem;
 		}
 	}
 	.page-content:before {

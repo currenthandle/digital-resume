@@ -158,7 +158,7 @@ router.addRoute('/experience', function(m) {
 
 	])
 })
-
+/*
 router.addRoute('/contact', function(m) {
 	return h('div', { id: 'index' }, [
 		navGenerator(m.route),
@@ -185,6 +185,7 @@ router.addRoute('/contact', function(m) {
 
 	])
 })
+*/
 
 router.addRoute('/resume', function(m) {
 	return h('div', { id: 'resume' }, [

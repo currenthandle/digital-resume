@@ -36,7 +36,6 @@ html, body, #content, #index {
     display: none; } }
 
 #index .nav-container {
-  overflow: auto;
   background-color: rgba(222, 89, 58, 0.95);
   box-sizing: border-box;
   padding-top: 1.2rem;
@@ -51,9 +50,13 @@ html, body, #content, #index {
       #index .nav-container img {
         display: none; }
       #index .nav-container ul {
+        margin-top: -0.2 0.8rem !important;
         display: none; }
         #index .nav-container ul a {
-          padding-left: 1% !important; }
+          padding: .7rem 0 .7rem 1% !important;
+          font-size: 1.3rem !important; }
+        #index .nav-container ul li:last-child {
+          margin-bottom: .5rem; }
         #index .nav-container ul i {
           margin-right: 1rem !important;
           margin-left: .7rem; }
@@ -63,7 +66,7 @@ html, body, #content, #index {
         color: white;
         padding-bottom: 0;
         overflow: auto;
-        margin-bottom: 16px; }
+        margin-bottom: 1rem; }
         #index .nav-container .min-content .copy {
           float: left;
           margin-left: 5%;
@@ -85,7 +88,9 @@ html, body, #content, #index {
       height: 100%;
       float: left; }
       #index .nav-container img {
-        display: inline-block; }
+        display: inline-block;
+        margin-top: 2rem;
+        margin-bottom: 0; }
       #index .nav-container .min-content {
         display: none; } }
   #index .nav-container .home-link {
@@ -136,22 +141,22 @@ html, body, #content, #index {
   background-color: #f9f9f9;
   box-sizing: border-box;
   vertical-align: top;
-  padding: 0 2rem 0 .25rem;
+  padding: 0 .25rem 0 .25rem;
   text-align: center;
   height: 100%;
-  overflow: auto; }
+  overflow: auto;
+  padding-bottom: 1.7rem; }
   @media (max-width: 1000px) {
     #index .page-content {
-      padding-bottom: 1.7rem;
-      border-top: 0.3rem solid #7c3602;
+      border-top: 0.2rem solid #7c3602;
       width: 100%; } }
   @media (min-width: 1000px) {
     #index .page-content {
       float: left;
-      border-left: 0.3rem solid #7c3602;
+      border-left: 0.2rem solid #7c3602;
       width: 78%; } }
   #index .page-content .content-box {
-    padding-top: 3.7rem; }
+    padding-top: 2.3rem; }
 
 #index .page-content:before {
   border-left: 3px solid grey; }
@@ -261,7 +266,7 @@ html, body, #content, #index {
   #education .content-box {
     border-radius: 0.3rem;
     background-color: rgba(255, 255, 255, 0.8);
-    margin-top: 0.9rem;
+    margin-top: 2rem;
     margin-left: 5%;
     margin-right: 5%;
     display: inline-block;
@@ -310,8 +315,7 @@ html, body, #content, #index {
       transition-duration: 900ms; }
 
 #projects .project {
-  text-align: left;
-  margin-bottom: 5rem; }
+  text-align: left; }
   #projects .project .content-box {
     display: inline-grid; }
   #projects .project .img-wrapper {

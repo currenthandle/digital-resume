@@ -1,6 +1,5 @@
 #projects .project {
-  text-align: left;
-  margin-bottom: 5rem; }
+  text-align: left; }
   #projects .project .content-box {
     display: inline-grid; }
   #projects .project .img-wrapper {
