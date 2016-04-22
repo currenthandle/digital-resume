@@ -46,7 +46,8 @@ html, body, #content, #index {
   @media (max-width: 1000px) {
     #index .nav-container {
       display: block;
-      width: 100%; }
+      width: 100%;
+      overflow: auto; }
       #index .nav-container img {
         display: none; }
       #index .nav-container ul {

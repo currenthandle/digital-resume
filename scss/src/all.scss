@@ -56,6 +56,7 @@ html , body , #content , #index {
 		@media (max-width: $break-point) {
 			display: block;
 			width: 100%;
+			overflow: auto;
 			img{
 				display: none;
 			}
@@ -120,7 +121,6 @@ html , body , #content , #index {
 			height: 100%;
 			float: left;
 		}
-		//overflow: auto;
 		//border-right: .3rem solid green;
 		//position: fixed;
 		background-color: $nav-background;
