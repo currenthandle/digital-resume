@@ -26,22 +26,24 @@ function navGenerator(route) {
 	var externalsDiv = h('div', { id: 'external-links' }, externalList )
 	if (route === '/'){
 		return h('div', { class: 'nav-container nav-home ' },  [
-			h('ul', navContent.map((navItem) => h('li', h('a', { href:  navItem.uri }, h('div', navItem.tabName))))),
+			h('ul', navContent.map((navItem) => h('li', h('a', { href:  navItem.uri },  [
+					h('i', { class: 'fa ' + navItem.icon }),
+					h('span', navItem.tabName),
+				])
+			))),
 			externalsDiv	
 		])
 	} else {
 		return h('div', { class: 'nav-container' }, [ 
-			h('ul', [h('a', { href: '/' }, h('img', { src: 'img/profile-img.jpg' }))]
-				.concat(
-					navContent.map((navItem) => {
-						if(route === navItem.uri) {
-							return h('li', { class: 'active' }, h('a', {  href: navItem.uri }, navItem.tabName))
-						 }else {
-							return h('li', { class: 'in-active' }, h('a', {  href: navItem.uri }, navItem.tabName))
-						}
-					})
-				)
-			),
+			h('ul', [
+				h('a', { href: '/' }, 
+				h('img', { src: 'img/profile-img.jpg' })
+			)].concat(navContent.map((navItem) => h('li', h('a', { href:  navItem.uri },  [
+						h('i', { class: 'fa ' + navItem.icon }),
+						h('span', navItem.tabName),
+					])
+				))
+			)),
 			externalsDiv 
 		])
 	}
@@ -73,8 +75,7 @@ router.addRoute('/education', function(m) {
 	var education = require('./data/education.js')
 	return h('div', { id: 'index' }, [
 		navGenerator(m.route),
-		h('div', { class: 'page-content', id: 'education' }, 
-		[
+		h('div', { class: 'page-content', id: 'education' }, [
 			h('div', { class: 'content-box' }, [
 				h('img', { id: 'seal', src: education.seal }),
 				h('h2', { id: 'school-name' },  h('span', education.name)),
@@ -159,24 +160,26 @@ router.addRoute('/contact', function(m) {
 		navGenerator(m.route),
 		h('div', { class: 'page-content', id: 'contact' },
 			h('div', { class: 'content-box' }, 
-				h('form', [
+				h('form', { action: 'MAILTO:leptone55@gmail.com' }, [
 					h('div', { class: 'name' }, [
 						h('span', 'Name'),
 						h('input', { type: 'text',  name: 'name' }),
 					]),
 					h('div', { class: 'email' }, [
 						h('span', 'E-mail'),
-						h('input', { type: 'text',  name: 'email' }),
+						h('input', { type: 'email',  name: 'email' }),
 					]),
 					h('div', { class: 'message' }, [
 						h('span', 'message'),
 						h('input', { type: 'text',  name: 'message' }),
-					])
+					]),
+					h('input', { type: 'submit', value: 'Send' })
 				])
 			)
-		)	
+		)
 	])
 })
+
 router.addRoute('/resume', function(m) {
 	return h('div', { id: 'resume' }, [
 		h('div', { id: 'resume-heading' }, [
