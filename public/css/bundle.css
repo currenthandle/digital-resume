@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-family: Karla, sans-serif; }
 
-html, body, #content, #index, .nav-container {
+html, body, #content, #index {
   height: 100%; }
 
 #content {
@@ -27,11 +27,28 @@ html, body, #content, #index, .nav-container {
       #index .nav-container ul {
         display: none; }
       #index .nav-container #external-links {
-        display: none; } }
+        display: none; }
+      #index .nav-container .min-content {
+        color: white;
+        font-size: 2rem;
+        padding-bottom: 1.5rem;
+        overflow: auto; }
+        #index .nav-container .min-content span {
+          float: left;
+          margin-left: 5%;
+          font-size: 1.6rem; }
+        #index .nav-container .min-content i {
+          float: right;
+          margin-right: 5%; }
+        #index .nav-container .min-content .fa-times {
+          display: none;
+          margin-right: 5%; } }
   @media (min-width: 1000px) {
     #index .nav-container {
       height: 100%;
-      float: left; } }
+      float: left; }
+      #index .nav-container .min-content {
+        display: none; } }
   #index .nav-container img {
     display: inline-block;
     width: 7.2rem;
@@ -80,11 +97,16 @@ html, body, #content, #index, .nav-container {
   vertical-align: top;
   padding: 0 2rem 0 .25rem;
   text-align: center;
-  width: 78%;
-  float: left;
-  overflow: auto;
   height: 100%;
-  border-left: 0.3rem solid #7c3602; }
+  overflow: auto; }
+  @media (max-width: 1000px) {
+    #index .page-content {
+      width: 100%; } }
+  @media (min-width: 1000px) {
+    #index .page-content {
+      float: left;
+      border-left: 0.3rem solid #7c3602;
+      width: 78%; } }
   #index .page-content .content-box {
     padding-top: 3.7rem; }
 

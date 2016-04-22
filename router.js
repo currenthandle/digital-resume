@@ -5,27 +5,20 @@ module.exports = router
 
 var tempString = "I am an allround web developer. I am a senior programmer with good knowledge of front-end techniques. I love structure and order and I also stand for quality. I love spending time on fixing little details and optimizing web apps. Also I like working in a team, you'll learn faster and more. As the saying goes: 'two heads are better than one"
 
-//navContent.map((navItem) => h('li', h('a', { href: '/' + navItem.uri }, navItem.tabName)))
 
 function navGenerator(route) {
 	var navContent = require('./data/nav-routes.js')
 	var externalLinks = require('./data/external-links')
-	/*
-	function tabsGenerator(active) {
-		navContent.map((navItem) => {
-			if(route === navItem.uri) {
-				return h('li', { class: 'active' }, h('a', {  href: navItem.uri }, navItem.tabName))
-			} else {
-				return h('li', h('a', { href: navItem.uri }, h('div', navItem.tabName)))
-			}
-		})
-
-	}
-	*/
 	var externalList = externalLinks.map((link) => h('a', { href: link.uri }, h('i', { class: link.class, 'aria-hidden': 'true'})))
 	var externalsDiv = h('div', { id: 'external-links' }, externalList )
+	var minContent = h('div', { class: 'min-content' }, [
+		h('span', 'Casey Siebel'),
+		h('i', { class: 'fa fa-bars', 'aria-hidden': 'true' }),
+		h('i', { class: 'fa fa-times', 'aria-hidden': 'true' })
+	])
 	if (route === '/'){
 		return h('div', { class: 'nav-container nav-home ' },  [
+			minContent,
 			h('ul', navContent.map((navItem) => h('li', h('a', { href:  navItem.uri },  [
 					h('i', { class: 'fa ' + navItem.icon }),
 					h('span', navItem.tabName),
@@ -35,6 +28,7 @@ function navGenerator(route) {
 		])
 	} else {
 		return h('div', { class: 'nav-container' }, [ 
+			minContent,
 			h('ul', [
 				h('a', { href: '/' }, 
 				h('img', { src: 'img/profile-img.jpg' })

@@ -2,7 +2,7 @@ body { //background-color: rgba(222, 89, 58, 0.95);
 	margin: 0;
 	font-family: Karla, sans-serif;
 }
-html , body , #content , #index , .nav-container {
+html , body , #content , #index {
 	height: 100%;
 }
 #content{
@@ -29,11 +29,31 @@ html , body , #content , #index , .nav-container {
 			#external-links{
 				display: none;
 			}
-			
+			.min-content {
+				color: white;
+				font-size: 2rem;
+				padding-bottom: 1.5rem;
+				overflow: auto;
+				span{
+					float: left;	
+					margin-left: 5%;
+					font-size: 1.6rem;
+				}
+				i{
+					float: right;
+					margin-right: 5%;
+				}
+				.fa-times {
+					display: none;
+					margin-right: 5%;
+				}
+			}
 		}
 		//expanded
 		@media (min-width: $break-point) {
-			
+			.min-content {
+				display: none;
+			}
 			height: 100%;
 			float: left;
 		}
@@ -113,12 +133,17 @@ html , body , #content , #index , .nav-container {
 		padding: 0 2rem 0 .25rem;
 		text-align: center;
 		//display: table-cell;
-		width: $content-width;
-		float: left;
-		overflow: auto;
 		height: 100%;
+		overflow: auto;
+		@media (max-width: $break-point) {
+			width: 100%;
+		}
+		@media (min-width: $break-point){
+			float: left;
+			border-left: .3rem solid rgba(124, 54, 2, 1); 
+			width: $content-width;
+		}
 		
-		border-left: .3rem solid rgba(124, 54, 2, 1); 
 		.content-box {
 			padding-top: 3.7rem;
 		}
