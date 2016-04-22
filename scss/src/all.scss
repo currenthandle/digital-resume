@@ -159,6 +159,18 @@ html , body , #content , #index , .nav-container {
 		}
 	}
 }
+@media (max-width: 600px) {
+	.nav-container {
+		display: block;
+		width: 100%;
+		float: none;
+	}	
+	.page-content {
+		width: 100%;
+		display: block;
+		float: none;
+	}
+}
 /*
 .vertical-line:first-child {
 	//padding-: .2rem;
@@ -174,3 +186,4 @@ html , body , #content , #index , .nav-container {
 	margin-right: .2rem;
 }
 	*/
+	
