@@ -12,14 +12,26 @@ html, body, #content, #index, .nav-container {
   padding-top: 6.8rem !important; }
 
 #index .nav-container {
-  float: left;
   overflow: auto;
-  height: 100%;
   background-color: rgba(222, 89, 58, 0.95);
   box-sizing: border-box;
   padding-top: 1.2rem;
   vertical-align: top;
   width: 22%; }
+  @media (max-width: 1000px) {
+    #index .nav-container {
+      display: block;
+      width: 100%; }
+      #index .nav-container img {
+        display: none; }
+      #index .nav-container ul {
+        display: none; }
+      #index .nav-container #external-links {
+        display: none; } }
+  @media (min-width: 1000px) {
+    #index .nav-container {
+      height: 100%;
+      float: left; } }
   #index .nav-container img {
     display: inline-block;
     width: 7.2rem;

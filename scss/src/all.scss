@@ -14,10 +14,30 @@ html , body , #content , #index , .nav-container {
 	.nav-home {
 		padding-top: 6.8rem !important;
 	}
+	$break-point: 1000px;
 	.nav-container{
-		float: left;
+		//min
+		@media (max-width: $break-point) {
+			display: block;
+			width: 100%;
+			img{
+				display: none;
+			}
+			ul{
+				display: none;
+			}
+			#external-links{
+				display: none;
+			}
+			
+		}
+		//expanded
+		@media (min-width: $break-point) {
+			
+			height: 100%;
+			float: left;
+		}
 		overflow: auto;
-		height: 100%;
 		//border-right: .3rem solid green;
 		//position: fixed;
 		background-color: $nav-background;
