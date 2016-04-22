@@ -10,11 +10,14 @@ function navGenerator(route) {
 	var navContent = require('./data/nav-routes.js')
 	var externalLinks = require('./data/external-links')
 	var externalList = externalLinks.map((link) => h('a', { href: link.uri }, h('i', { class: link.class, 'aria-hidden': 'true'})))
-	var externalsDiv = h('div', { id: 'external-links' }, externalList )
+	var externalsDiv = h('div', { id: 'external-links' }, h('div', externalList ))
 	var minContent = h('div', { class: 'min-content' }, [
-		h('span', 'Casey Siebel'),
+		h('div', { class: 'copy' }, [	
+			h('span', { class: 'name' }, 'Casey Siebel'),
+			h('span', { class: 'title' }, 'Web Developer')
+		]),
 		h('i', { class: 'fa fa-bars', 'aria-hidden': 'true' }),
-		h('i', { class: 'fa fa-times', 'aria-hidden': 'true' })
+		h('i', { class: 'fa fa-times', 'aria-hidden': 'true' }),
 	])
 	if (route === '/'){
 		return h('div', { class: 'nav-container nav-home ' },  [
@@ -29,15 +32,11 @@ function navGenerator(route) {
 	} else {
 		return h('div', { class: 'nav-container' }, [ 
 			minContent,
-			h('ul', [
-				h('a', { href: '/' }, 
-				h('img', { src: 'img/profile-img.jpg' })
-			)].concat(navContent.map((navItem) => h('li', h('a', { href:  navItem.uri },  [
-						h('i', { class: 'fa ' + navItem.icon }),
-						h('span', navItem.tabName),
-					])
-				))
-			)),
+			h('a', { class: 'home-link', href: '/' }, h('img', { src: 'img/profile-img.jpg' })),
+			h('ul', navContent.map((navItem) => h('li', h('a', { href:  navItem.uri },  [
+				h('i', { class: 'fa ' + navItem.icon }),
+				h('span', navItem.tabName),
+			])))),
 			externalsDiv 
 		])
 	}

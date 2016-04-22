@@ -16,6 +16,9 @@ html , body , #content , #index {
 	}
 	$break-point: 1000px;
 	.nav-container{
+		ul {
+			margin-bottom: 0 !important;
+		}
 		//min
 		@media (max-width: $break-point) {
 			display: block;
@@ -25,32 +28,50 @@ html , body , #content , #index {
 			}
 			ul{
 				display: none;
+				a {
+					padding-left: 1% !important;
+				}
+				i {
+					margin-right: 1rem !important;
+					margin-left: .7rem;
+				}
 			}
 			#external-links{
 				display: none;
 			}
 			.min-content {
 				color: white;
-				font-size: 2rem;
-				padding-bottom: 1.5rem;
+				padding-bottom: 0;
 				overflow: auto;
-				span{
+				margin-bottom: 16px;
+				.copy{
 					float: left;	
 					margin-left: 5%;
 					font-size: 1.6rem;
+					.title{
+						font-size: 1rem;
+						margin-top: .3rem;
+					}
+					& > span{
+						display: block;
+					}
 				}
 				i{
+					font-size: 2rem;
 					float: right;
-					margin-right: 5%;
+					margin-right: 6%;
+					margin-top: .6rem;
 				}
 				.fa-times {
 					display: none;
-					margin-right: 5%;
 				}
 			}
 		}
 		//expanded
 		@media (min-width: $break-point) {
+			img {
+				display: inline-block;
+			}
 			.min-content {
 				display: none;
 			}
@@ -66,8 +87,11 @@ html , body , #content , #index {
 		vertical-align: top;
 		width: $nav-width;
 		//display: table-cell;
+		.home-link{
+			text-align: center;
+			display: block;
+		}
 		img {
-			display: inline-block;
 			width: 7.2rem;
 			border: .2rem solid white;
 			border-radius: 10rem;
@@ -136,6 +160,7 @@ html , body , #content , #index {
 		height: 100%;
 		overflow: auto;
 		@media (max-width: $break-point) {
+			border-top: .3rem solid rgba(124, 54, 2, 1); 
 			width: 100%;
 		}
 		@media (min-width: $break-point){
@@ -186,20 +211,29 @@ html , body , #content , #index {
 	font-weight: none;
 	text-align: center;
 	display: inline-block;
-
 }
 #external-links {
 	text-align: center;
-	margin-top:  2.4rem;
+	margin-top:  1.6rem;
+	& > div {
+		display: inline-block;
+		border-top: .12rem solid $brown-color;
+		padding-top: 1.9rem;
+		width: 80%;
+	}
 	a{
-		margin: 0 1rem 0 1rem;
+		&:first-child{
+			margin-right: 1.8rem;	
+		}
+		&:last-child{
+			margin-left: 1.8rem;	
+		}
 		i{
 			color: white;
 			font-size: 2.5rem;
 			transition: all 300ms ease-in-out;
 			&:hover{
 				transform: scale(1.3);
-				//transition: all 500ms ease;
 			}
 		}
 	}
@@ -216,13 +250,12 @@ html , body , #content , #index {
 		float: none;
 	}
 }
+
 /*
 .vertical-line:first-child {
 	//padding-: .2rem;
 
 }
-
-
 .vertical-line {
 	background-color: $brown-color;
 	float: left;
