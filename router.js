@@ -50,7 +50,7 @@ router.addRoute('/', function(m) {
 		h('div', { class: 'page-content' , id: 'home'}, [
 			h('div', { class: 'content-box' }, [
 				h('img', { src: info.img }),
-				h('p', { class: 'quote' }, info.quote),
+				//h('p', { class: 'quote' }, info.quote),
 				h('h1', { class: 'name' }, info.name),
 				h('span', { class: 'local' }, info.local),
 				h('p', { class: 'blurb' }, info.blurb)
