@@ -12,7 +12,7 @@ html , body , #content , #index {
 #index {
 	//display: table-row;
 	.nav-home {
-		padding-top: 6.8rem !important;
+		//padding-top: 6.8rem !important;
 	}
 	$break-point: 1000px;
 	#min-externals {
@@ -93,7 +93,14 @@ html , body , #content , #index {
 						font-size: 1rem;
 						margin-top: .3rem;
 					}
-					& > span{
+					a{
+						text-decoration: none;
+						color: inherit;
+						&:hover {
+							color: #7c3602;		
+						}
+					}
+					span{
 						display: block;
 					}
 				}

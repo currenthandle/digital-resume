@@ -14,10 +14,12 @@ var minExternals = h('div', { id: 'min-externals' }, h('div', externalList ))
 function navGenerator(route) {
 	var navContent = require('./data/nav-routes.js')
 	var minContent = h('div', { class: 'min-content' }, [
-		h('div', { class: 'copy' }, [	
-			h('span', { class: 'name' }, 'Casey Siebel'),
-			h('span', { class: 'title' }, 'Web Developer')
-		]),
+		h('div', { class: 'copy' }, 
+			h('a', { href: '/' } , [
+				h('span', { class: 'name' }, 'Casey Siebel'),
+				h('span', { class: 'title' }, 'Web Developer')
+			])
+		),
 		h('i', { class: 'fa fa-bars', 'aria-hidden': 'true' }),
 		h('i', { class: 'fa fa-times', 'aria-hidden': 'true' }),
 	])

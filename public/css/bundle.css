@@ -8,9 +8,6 @@ html, body, #content, #index {
 #content {
   width: 100%; }
 
-#index .nav-home {
-  padding-top: 6.8rem !important; }
-
 @media (max-width: 1000px) {
   #index #min-externals {
     background-color: rgba(222, 89, 58, 0.95);
@@ -75,7 +72,12 @@ html, body, #content, #index {
           #index .nav-container .min-content .copy .title {
             font-size: 1rem;
             margin-top: .3rem; }
-          #index .nav-container .min-content .copy > span {
+          #index .nav-container .min-content .copy a {
+            text-decoration: none;
+            color: inherit; }
+            #index .nav-container .min-content .copy a:hover {
+              color: #7c3602; }
+          #index .nav-container .min-content .copy span {
             display: block; }
         #index .nav-container .min-content i {
           font-size: 2rem;
