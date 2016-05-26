@@ -38,6 +38,8 @@ html, body, #content, #index {
   padding-top: 1.2rem;
   vertical-align: top;
   width: 22%; }
+  #index .nav-container .homeNav {
+    margin-top: 6rem; }
   #index .nav-container ul {
     margin-bottom: 0 !important; }
   @media (max-width: 1000px) {

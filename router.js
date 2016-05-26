@@ -38,27 +38,25 @@ function navGenerator(route) {
 		])
 	}
 	function generateNavUl () {
-		return h('ul', navContent.map(function(navItem) {
-			console.log('route', route)
-			console.log('typeof  route', typeof route)
-			console.log('navItem.uri', navItem.uri)
-			console.log('typeof navItem.uri', typeof navItem.uri)
-			if (route === navItem.uri) {
-				console.log('active')
-				return h('li', { class: 'active' }, h('a', { href:  navItem.uri },  [
-					h('i', { class: 'fa ' + navItem.icon }),
-					h('span', navItem.tabName),
-				]))
-			}
-			else {
-			
-				console.log('NOT active')
-				return h('li', h('a', { href:  navItem.uri },  [
-					h('i', { class: 'fa ' + navItem.icon }),
-					h('span', navItem.tabName),
-				]))
-			}
-		}))
+		if (route === '/') return h('ul', { class: 'homeNav navUl' }, liGenerator() )
+		else return h('ul', { class: 'navUl' }, liGenerator() )
+		
+		function liGenerator() {
+			return navContent.map(function(navItem) {
+				if (route === navItem.uri) {
+					return h('li', { class: 'active' }, h('a', { href:  navItem.uri },  [
+						h('i', { class: 'fa ' + navItem.icon }),
+						h('span', navItem.tabName),
+					]))
+				}
+				else {
+					return h('li', h('a', { href:  navItem.uri },  [
+						h('i', { class: 'fa ' + navItem.icon }),
+						h('span', navItem.tabName),
+					]))
+				}
+			})
+		}	
 	}
 }
 router.addRoute('/', function(m) {
