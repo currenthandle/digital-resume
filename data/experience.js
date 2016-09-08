@@ -1,6 +1,16 @@
 module.exports = function() {
 	return [
 		{ 
+			employer: 'Indendent', 
+			position: 'Consultant', 
+			start: 'January 2016',
+			end: 'Present',
+			description: 'In my time as a consultant I\'ve built and designed websites and internal web tools for both tech startups and indiviuals customers. I prioritize customer service and iterating new designs and features quickly.',
+			tags: [
+				'Full Stack Development', 'Responsive Design', 'Engineering'
+			]
+		},
+		{ 
 			employer: 'Private Family', 
 			position: 'Music Tutor', 
 			local: 'Palo Alto',
@@ -37,9 +47,9 @@ module.exports = function() {
 			employer: 'Universal Music Group',
 			position: 'College & Lifestyle Marketing Representative',
 			local: 'Los Angeles, CA',
-			start: 'November 2010',
-			end: 'October 2011',
-			description: 'At UMG I handled all University Marketing for the Bay Area and assisted on genereal marketing in the area. I was constantly receiving promotional materials for new campaigns that I would distribute on campus and at events such as ablum release parties. Working in this position I the oppurtunity to interface directly with UMG excutives and artists.',
+			start: 'September 2010',
+			end: 'December 2011',
+			description: 'At UMG I handled all University Marketing for the Bay Area and assisted on general marketing in the area. I was constantly receiving promotional materials for new campaigns that I would distribute on campus and at events such as album release parties. Working in this position I had the opportunity to interface directly with UMG executives and artists.',
 			tags: [
 				'Marketing', 'Music', 'Events'
 			]
