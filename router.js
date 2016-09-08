@@ -143,7 +143,7 @@ router.addRoute('/projects', function(m) {
 		navGenerator(m.route),
 		h('div', { class: 'page-content', id: 'projects' }, projects.map(function(project){
 			return h('div', { class: 'project content-box' }, [
-				h('div', { class: 'img-wrapper' }, h('a', { href: project.link }, (h('img', { src: project.img })))),
+				h('div', { class: 'img-wrapper' },  (h('img', { src: project.img }))),
 				h('div', { class: 'name sub-heading' }, project.name),
 				h('p', { class: 'description' }, project.description),
 				tagGenerator(project)
