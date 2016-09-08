@@ -1,6 +1,20 @@
 module.exports = function() {
 	return [
 		{ 
+			name: 'Rheo Ingestor',
+			link: 'https://blue-goji.herokuapp.com',
+			role: 'Front End Developer',
+			img: 'img/Rheo.png',
+			description: 'Rheo is an AppleTV application that is best described as "Pandora for Video content."  Before I built the Rheo Ingestor, the work flow for video curators to add new videos to the Rheo database was inelegant and required the curators to wait up to an hour to see the change in the Rheo environment. I designed and developed a Chrome Extension that allows curators to easily and immediately add new videos to the Rheo database.',
+			tags: [
+                'Chrome Extension',
+                'CORS',
+				'Javascript',
+				'HTML',
+				'CSS'
+			]
+		},
+		{ 
 			name: 'Blue Goji',
 			link: 'https://blue-goji.herokuapp.com',
 			role: 'Developer',
