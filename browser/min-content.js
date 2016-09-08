@@ -1,7 +1,7 @@
 var collapsed = true
 var barIcon = document.getElementsByClassName('fa-bars')[0]
 var timesIcon = document.getElementsByClassName('fa-times')[0]
-var ul = document.getElementsByClassName('nav-container')[0].getElementsByTagName('ul')[0]
+var ul = document.getElementsByClassName('navUl')[0]
 //console.log(ul, 'ul')
 var prevWidth = window.innerWidth
 //console.log('prev', prevWidth)
@@ -9,7 +9,9 @@ var prevWidth = window.innerWidth
 barIcon.onclick = function() {
 	barIcon.setAttribute('style', 'display: none')
 	timesIcon.setAttribute('style', 'display: inline')
-	ul.setAttribute('style', 'display: block')
+    ul.style.display = 'block'
+    ul.style.marginTop = '0'
+	//ul.setAttribute('style', 'display: block')
 }
 timesIcon.onclick = function() {
 	barIcon.setAttribute('style', 'display: inline')
