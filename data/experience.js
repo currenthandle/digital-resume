@@ -11,17 +11,6 @@ module.exports = function() {
 			]
 		},
 		{ 
-			employer: 'Private Family', 
-			position: 'Music Tutor', 
-			local: 'Palo Alto',
-			start: 'April 2015',
-			end: 'Present',
-			description: 'For the last year I have been tutoring an 11 year old boy music production, audio mixing, and DJing. I have tutored before but never such a young student. I learned a great deal about framing my lessons in a way that holds the student\'s interest and keeps them engaged in the subject matter.',
-			tags: [
-				'Music', 'Tutor', 'Teaching'
-			]
-		},
-		{ 
 			employer: 'Vau de Vire Society',
 			position: 'Assistant Production Manager', 
 			local: 'San Francisco, CA',
