@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "css": "node-sass scss/bundle.scss -o public/css",
     "css-w": "node-sass scss/bundle.scss -w -o public/css",
-    "dev": "parallelshell 'npm run css-w' 'npm run watch' 'nodemon server.js'"
+    "dev": "parallelshell 'npm run css-w' 'nodemon server.js'"
   },
   "author": "",
   "license": "ISC",
