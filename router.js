@@ -1,12 +1,15 @@
 var router = require('routes')()
 var h = require('virtual-dom/h')
 
+// externalList is an array of vDOM nodes containing the external links (github, linkedin, etc)
 var externalList = require('./externals')
+// minExternals is a vDOM node containing the extenal links to be shown whent the site is viewed on mobile
 var minExternals = h('div', { id: 'min-externals' }, h('div', externalList ))
 
 module.exports = router
 
 var navGenerator = require('./navGenerator.js')
+var tagGenerator = require('./tagGenerator.js')
 
 router.addRoute('/', function(m) {
 	var info = require('./data/home.js')
@@ -83,9 +86,11 @@ router.addRoute('/skills', function(m) {
 
 	])
 })
+/*
 function tagGenerator (content) {
 	return  h('div', { class: 'tag-wrapper' }, content.tags.map((tag) => h('span', {class: 'tag' },  tag)))
 }
+*/
 router.addRoute('/projects', function(m) {
 	var projects = require('./data/projects')
 	return h('div', { id: 'index' }, [
