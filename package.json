@@ -9,7 +9,7 @@
     "css-w": "node-sass scss/bundle.scss -w -o public/css",
     "bundle": "browserify browser/*.js > public/js/bundle.js",
     "watch": "watchify browser/*.js -o public/js/bundle.js -dv",
-    "go": "parallelshell 'npm run css-w' 'npm run watch' 'nodemon server.js'"
+    "dev": "parallelshell 'npm run css-w' 'npm run watch' 'nodemon server.js'"
   },
   "author": "",
   "license": "ISC",
