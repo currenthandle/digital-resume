@@ -9,8 +9,10 @@ var externalsDiv = h('div', { id: 'external-links' }, h('div', externalList ))
 var minExternals = h('div', { id: 'min-externals' }, h('div', externalList ))
 
 
+// This is a function for generating the navigation menus
 function navGenerator(route) {
-	var navContent = require('./data/nav-routes.js')
+
+    // minContent is the nav menu users will see on a mobile device or narrow window
 	var minContent = h('div', { class: 'min-content' }, [
 		h('div', { class: 'copy' }, 
 			h('a', { href: '/' } , [
@@ -21,6 +23,7 @@ function navGenerator(route) {
 		h('i', { class: 'fa fa-bars', 'aria-hidden': 'true' }),
 		h('i', { class: 'fa fa-times', 'aria-hidden': 'true' }),
 	])
+    // The home route features my picture in the middle of the screen and thus shouldn't have this picture in the navigation menu
 	if (route === '/'){
 		return h('div', { class: 'nav-container nav-home ' },  [
 			minContent,
@@ -40,6 +43,8 @@ function navGenerator(route) {
 		else return h('ul', { class: 'navUl' }, liGenerator() )
 		
 		function liGenerator() {
+            // nav-routes.js returns an array contain the information for our routes
+            var navContent = require('./data/nav-routes.js')
 			return navContent.map(function(navItem) {
 				if (route === navItem.uri) {
 					return h('li', { class: 'active' }, h('a', { href:  navItem.uri },  [
