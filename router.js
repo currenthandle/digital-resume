@@ -18,7 +18,6 @@ router.addRoute('/', function(m) {
 		h('div', { class: 'page-content' , id: 'home'}, [
 			h('div', { class: 'content-box' }, [
 				h('img', { src: info.img }),
-				//h('p', { class: 'quote' }, info.quote),
 				h('h1', { class: 'name' }, info.name),
 				h('span', { class: 'local' }, info.local),
 				h('p', { class: 'blurb' }, info.blurb)
@@ -27,14 +26,6 @@ router.addRoute('/', function(m) {
 		minExternals
 	])
 })
-/*
-router.addRoute('/about', function(m) {
-	return h('div', { id: 'index' }, [
-		navGenerator(m.route),
-		h('div', { class: 'page-content', id: 'about' }, 'ABOUT')
-	])
-})
-*/
 router.addRoute('/education', function(m) {
 	var education = require('./data/education.js')
 	return h('div', { id: 'index' }, [
@@ -86,11 +77,6 @@ router.addRoute('/skills', function(m) {
 
 	])
 })
-/*
-function tagGenerator (content) {
-	return  h('div', { class: 'tag-wrapper' }, content.tags.map((tag) => h('span', {class: 'tag' },  tag)))
-}
-*/
 router.addRoute('/projects', function(m) {
 	var projects = require('./data/projects')
 	return h('div', { id: 'index' }, [
@@ -128,34 +114,6 @@ router.addRoute('/experience', function(m) {
 
 	])
 })
-/*
-router.addRoute('/contact', function(m) {
-	return h('div', { id: 'index' }, [
-		navGenerator(m.route),
-		h('div', { class: 'page-content', id: 'contact' },
-			h('div', { class: 'content-box' }, 
-				h('form', { action: 'MAILTO:leptone55@gmail.com' }, [
-					h('div', { class: 'name' }, [
-						h('span', 'Name'),
-						h('input', { type: 'text',  name: 'name' }),
-					]),
-					h('div', { class: 'email' }, [
-						h('span', 'E-mail'),
-						h('input', { type: 'email',  name: 'email' }),
-					]),
-					h('div', { class: 'message' }, [
-						h('span', 'message'),
-						h('input', { type: 'text',  name: 'message' }),
-					]),
-					h('input', { type: 'submit', value: 'Send' })
-				])
-			)
-		),
-		minExternals
-
-	])
-})
-*/
 
 router.addRoute('/resume', function(m) {
 	return h('div', { id: 'resume' }, [
