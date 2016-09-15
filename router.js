@@ -31,7 +31,7 @@ router.addRoute('/education', function(m) {
 	return h('div', { id: 'index' }, [
 		navGenerator(m.route),
 		h('div', { class: 'page-content', id: 'education' }, [
-			h('div', { class: 'content-box' }, [
+			h('div', { class: 'education-wrapper content-box' }, [
 				h('img', { id: 'seal', src: education.seal }),
 				h('h2', { id: 'school-name' },  h('span', education.name)),
 				h('h3', [ h('span', education.degree + ', ' + education.gradDate)]),
