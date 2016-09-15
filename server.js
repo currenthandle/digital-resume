@@ -15,7 +15,7 @@ var server = http.createServer(function(req, res) {
 				'#content': html
 			}))
 			.pipe(res)
-	} else st(req, res)
+    } else st(req, res)
 })
 
 server.listen(process.env.PORT || 5000)
