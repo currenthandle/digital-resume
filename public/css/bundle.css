@@ -257,6 +257,11 @@ html, body, #content, #index {
     width: 12rem; }
   #home .quote {
     font-style: italic; }
+  #home .content-box {
+    margin-top: 7rem; }
+  @media (min-width: 1000px) {
+    #home .content-box {
+      margin-top: 5rem; } }
 
 #education {
   padding-top: 3rem 6rem 0 6rem;

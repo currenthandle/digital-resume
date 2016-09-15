@@ -1,4 +1,3 @@
-
 #home{
 	background-color: $page-background;
 	box-sizing: border-box;
@@ -21,4 +20,15 @@
 	.quote {
 		font-style: italic;
 	}
+    .content-box {
+        margin-top: 7rem;
+    }
+    @media (min-width: 1000px) {
+        .content-box {
+            margin-top: 5rem;
+            
+        }
+
+
+    }
 }
