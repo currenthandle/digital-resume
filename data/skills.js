@@ -11,7 +11,7 @@ module.exports = function() {
 			{ name: 'Java', score: '2'},
 		],
 		libraries: [
-			{ name: 'Express.js', score: '4'},
+			{ name: 'Express.js', score: '5'},
 			{ name: 'Bootstrap', score: '4'},
 			{ name: 'Angular.js', score: '3'},
 			{ name: 'jQuery', score: '3'},
