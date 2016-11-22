@@ -7,6 +7,6 @@ module.exports = function () {
 		
 		quote: "It from bit. Otherwise put, every 'it'-every particle, every field of force, even the space-time continuum itself-derives its function, its meaning, its very existence...from the...answers to yes-or-no questions, binary choices, bits.",
 		author: 'John Archibald Wheeler',
-		blurb: 'I entered Berkeley with my major undeclared but was leaning strongly towards studying Computer Science or Economics. However, a series of courses I took on Astronomy and Cosmology drew my attention down a differnet path. A deeply seated discomfort caused by the seemingly nonsense nature of Quantum Mechanics galvanized my curiosity in the field of Physics. I was fascinated when I first heard about Wheeler\'s "it from bit" and subsiquently found myself committed to the field of Quantum Information Science.'	
+		blurb: 'I entered Berkeley with my major undeclared but was leaning strongly towards studying Computer Science or Economics. However, a series of courses I took on Astronomy and Cosmology drew my attention down a differnet path. A deeply seated discomfort caused by the seemingly nonsense nature of Quantum Mechanics galvanized my curiosity in the field of Physics. I was fascinated when I first heard about Wheeler\'s "it from bit" and subsequently found myself committed to the field of Quantum Information Science.'	
 	}
 }()

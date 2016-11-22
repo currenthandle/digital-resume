@@ -5,7 +5,7 @@ module.exports = function() {
 			position: 'Consultant', 
 			start: 'January 2016',
 			end: 'Present',
-			description: 'In my time as a consultant I\'ve built and designed websites and internal web tools for both tech startups and indiviuals customers. I prioritize customer service and iterating new designs and features quickly.',
+			description: 'In my time as a consultant I\'ve built and designed websites and internal web tools for both tech startups and indiviual customers. I prioritize customer service and iterating new designs and features quickly.',
 			tags: [
 				'Full Stack Development', 'Responsive Design', 'Engineering'
 			]
